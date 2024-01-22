@@ -17,7 +17,7 @@ static_files = {
 
 sio = socketio.AsyncServer(async_mode="asgi")
 
-sobe = List[Soba]
+sobe: List[Soba]
 
 @app.post("/sobe/udji/")
 async def udji(kod : str, igrac : Igrac) -> Soba:

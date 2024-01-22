@@ -1,0 +1,20 @@
+{
+    "pitanja": [
+        {
+            "pitanje": "Pitanje glasi ovako",
+            "a": "ponuda a (tacna)",
+            "b": "ponuda b",
+            "c": "ponuda c",
+            "d": "ponuda d",
+            "tacan": "a"
+        },
+        {
+            "pitanje": "Drugo pitanje glasi ovako",
+            "a": "ponuda a",
+            "b": "ponuda b (tacna)",
+            "c": "ponuda c",
+            "d": "ponuda d",
+            "tacan": "b"
+        }
+    ]
+}

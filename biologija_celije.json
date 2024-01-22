@@ -1,0 +1,164 @@
+{
+    "pitanja": [
+        {
+            "pitanje": "Biološka disciplina koja se bavi proučavanjem organizacije ćelije se naziva:",
+            "a": "Histologija",
+            "b": "Genetika",
+            "c": "Citologija",
+            "d": "Ornitologija",
+            "tacan": "c"
+        },
+        {
+            "pitanje": "Za žive sisteme možemo da kažemo da su:",
+            "a": "Dinamički i zatvoreni",
+            "b": "U materijalnoj i energetskoj izolaciji od sredine u kojoj žive",
+            "c": "Statični i stabilni",
+            "d": "Dinamički, stabilni i otvoreni",
+            "tacan": "d"
+        },
+        {
+            "pitanje": "Osnovna morfološka i funkcionalna jedinica žive materije je:",
+            "a": "Ćelija",
+            "b": "Tkivo",
+            "c": "Jedinka",
+            "d": "Populacija",
+            "tacan": "a"
+        },
+        {
+            "pitanje": "Pojam ćelijske populacije podrazumjeva:",
+            "a": "Isključivo tjelesne (somatske) ćelije jednog organizma",
+            "b": "Ćelije različitih morfoloških i funkcionalnih karakteristika",
+            "c": "Ćelije istih ili sličnih morfoloških i funkcionalnih karakteristika",
+            "d": "Samo polne (gametske) ćelije jednog organizma",
+            "tacan": "c"
+        },
+        {
+            "pitanje": "Koji od navedenih elemenata ima veliki značaj u izgradnji nukleinskih kiselina:",
+            "a": "Azot",
+            "b": "Sumpor",
+            "c": "Kalcijum",
+            "d": "Kalijum",
+            "tacan": "a"
+        },
+        {
+            "pitanje": "Koji od navedenih elemenata ulazi u sastav organskih molekula bogatih energijom:",
+            "a": "Magnezijum",
+            "b": "Fosfor",
+            "c": "Sumpor",
+            "d": "Mangan",
+            "tacan": "b"
+        },
+        {
+            "pitanje": "Element sumpor:",
+            "a": "Ulazi u sastav nukleinskih kiselina",
+            "b": "Predstavlja glavni sastojak hemoglobina",
+            "c": "Je važan sastojak nekih amino kiselina",
+            "d": "Ulazi u sastav hlorofila",
+            "tacan": "c"
+        },
+        {
+            "pitanje": "Važan sastojak hemoglobina je:",
+            "a": "Magnezijum",
+            "b": "Kalijum",
+            "c": "Kalcijum",
+            "d": "Gvožđe",
+            "tacan": "d"
+        },
+        {
+            "pitanje": "Podjela elemenata koji su prisutni u ćelijama na mikroelemente i makroelemente je izvršena prema:",
+            "a": "Veličini njihovih atoma",
+            "b": "Njihovom značaju za ćeliju i organizam",
+            "c": "Načinu njihovog transporta kroz membranu",
+            "d": "Količini tih elemenata",
+            "tacan": "d"
+        },
+        {
+            "pitanje": "Koji od navedenih elemenata ima poseban značaj za živi svijet i njegov nastanak:",
+            "a": "Ugljik",
+            "b": "Kisik",
+            "c": "Vodik",
+            "d": "Azot",
+            "tacan": "a"
+        },
+        {
+            "pitanje": "Zaokružite tačnu rečenicu:",
+            "a": "Voda je univerzalni rastvarač mnogih organskih i neorganskih supstanci.",
+            "b": "Metabolički aktivnije ćelije sadrže manju količinu vode.",
+            "c": "Količina vode u ćelijama se tokom starenja ne mijenja.",
+            "d": "Sve ćelije i tkiva jednog organizma imaju jednaku količinu vode.",
+            "tacan": "a"
+        },
+        {
+            "pitanje": "Koji je od navedenih prostih šećera pentoza:",
+            "a": "Glukoza",
+            "b": "Fruktoza",
+            "c": "Galaktoza",
+            "d": "Riboza ",
+            "tacan": "d"
+        },
+        {
+            "pitanje": "Glavni izvor energije za ćelije i cjeo organizam su:",
+            "a": "Heksoze",
+            "b": "Prosti lipidi",
+            "c": "Amino kiseline",
+            "d": "Nukleotidi",
+            "tacan": "a"
+        },
+        {
+            "pitanje": "Rezervni oblik šećera kod biljaka je:",
+            "a": "Glikogen",
+            "b": "Hitin",
+            "c": "Skrob",
+            "d": "Celuloza",
+            "tacan": "c"
+        },
+        {
+            "pitanje": "Lipidi su organska jedinjenja čije su najznačajnije komponenete:",
+            "a": "Alkoholi i amino kiseline",
+            "b": "Alkoholi i nukleinske kiseline",
+            "c": "Alkoholi i azotne baze",
+            "d": "Alkoholi i masne kiseline",
+            "tacan": "d"
+        },
+        {
+            "pitanje": "U ćelijama masnog tkiva masti su deponovane u:",
+            "a": "Lizozomima",
+            "b": "Goldži aparatu",
+            "c": "Citoplazmi u obliku masnih kapljica",
+            "d": "Peroksizomima",
+            "tacan": "c"
+        },
+        {
+            "pitanje": "Kojim hemijskim vezama će se povezati amino kiseline da bi izgradile polimer:",
+            "a": "Fosfodiestarskim",
+            "b": "Peptidnim",
+            "c": "Glikozidnim",
+            "d": "Vodoničnim",
+            "tacan": "b"
+        },
+        {
+            "pitanje": "Koliko različitih proteina može da se sintetiše od 20 tipova amino kiselina:",
+            "a": "10^5",
+            "b": "10^6",
+            "c": "10^9",
+            "d": "Neograničeno",
+            "tacan": "d"
+        },
+        {
+            "pitanje": "Da bi molekul proteina bio biološki aktivan treba:",
+            "a": "Samo da ima sekundarnu strukturu",
+            "b": "Dovoljno je da ima primarnu strukturu",
+            "c": "Da bude uvijek povezan sa odgovarajućim šećerom",
+            "d": "Da ima sekundarnu tercijernu i ponekad kvarternarnu strukturu",
+            "tacan": "d"
+        },
+        {
+            "pitanje": "Složeni proteini:",
+            "a": "Se sastoje iz više polipeptidnih lanaca",
+            "b": "Se obrazuju spajanjem prostih proteina sa drugim neproteinskim molekulima",
+            "c": "Su albumini",
+            "d": "Su globulini",
+            "tacan": "b"
+        }
+    ]
+}

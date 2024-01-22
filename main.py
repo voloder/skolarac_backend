@@ -76,7 +76,7 @@ async def zapocni_sobu(soba : Soba):
      
     pitanja = ucitaj_pitanja()
     
-    for i in range(2):
+    for i in range(10):
         soba.pitanje = pitanja[i]
         
         soba.stanje = "pitanje"

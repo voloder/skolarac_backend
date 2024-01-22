@@ -83,9 +83,10 @@ async def zapocni_sobu(soba : Soba):
         await odbroji(soba, soba.vrijeme_pitanja)
         
         for igrac in soba.igraci:
-            if(["a", "b", "c", "d"][igrac.odabir] == soba.pitanje.tacan):
-                igrac.poeni += 5
-        
+            if(igrac.odabir is not None):
+                if(["a", "b", "c", "d"][igrac.odabir] == soba.pitanje.tacan):
+                    igrac.poeni += 5
+            
         soba.stanje = "otkrij"
         await odbroji(soba, soba.vrijeme_otkrivanja)
     

@@ -95,7 +95,7 @@ async def zapocni_sobu(soba : Soba):
 
 
 def ucitaj_pitanja() -> List[Pitanje]:
-    f = open("pitanja.json")
+    f = open("biologija_celije.json")
     pitanja = []
     for pitanje in json.load(f)["pitanja"]:
         pitanja.append(Pitanje(pitanje=pitanje["pitanje"],

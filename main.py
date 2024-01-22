@@ -17,13 +17,13 @@ static_files = {
 
 sio = socketio.AsyncServer(async_mode="asgi")
 
-sobe = []
+sobe = List[Soba]
 
 @app.post("/sobe/udji/")
 async def udji(kod : str, igrac : Igrac) -> Soba:
     for soba in sobe:
         if soba.kod == kod:
-            soba.ucesnici.append(igrac)
+            soba.igraci.append(igrac)
             await sio.emit("soba_" + soba.kod, soba.model_dump_json())
             return soba
     raise HTTPException(status_code=404, detail="Soba ne postoji")

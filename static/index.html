@@ -143,7 +143,14 @@
             $("#zapocniButton").on("click", function () {
                 zapocniSobu();
             });
-
+            
+            $(".openbtn").on("click", function () {
+                openNav();
+            });
+            
+            $(".closebtn").on("click", function () {
+                closeNav();
+            });
 
         });
 
@@ -163,13 +170,13 @@
 <body class="bg-info">
 
     <div id="mySidebar" class="sidebar ">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="javascript:void(0)" class="closebtn">&times;</a>
         <label for="vrijemePitanja" class="form-label text-white p-2" id="vrijemePitanjaLabel">Vrijeme pitanja: 15s</label>
         <input type="range" class="form-range p-2" min="5" max="60" step="5" value="15" id="vrijemePitanja">
     </div>
 
     <div id="main">
-        <button class="openbtn" onclick="openNav()"><span class="material-symbols-outlined" style="font-size:60px;">
+        <button class="openbtn"><span class="material-symbols-outlined" style="font-size:60px;">
                 settings
             </span></button>
     </div>

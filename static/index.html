@@ -6,14 +6,19 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,1000&display=swap"
         rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
     <style>
         html,
         body {
@@ -37,6 +42,48 @@
         .nodisplay {
             display: none;
         }
+
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: rgb(50, 50, 68);
+            overflow-x: hidden;
+            transition: 0.3s;
+        }
+
+        .sidebar * {
+            display: block;
+        }
+
+        .sidebar .closebtn {
+            position: relative;
+            top: 0;
+            font-size: 36px;
+        }
+
+        .openbtn {
+            cursor: pointer;
+            background-color: #00000000;
+            color: black;
+            border: none;
+        }
+
+        #main {
+            position: absolute;
+            right: 0;
+            padding: 20px;
+        }
+
+        .closebtn {
+            color: white;
+            text-decoration: none;
+            padding-left: 15px;
+            position: relative;
+        }
     </style>
 
     <script type="module">
@@ -57,23 +104,23 @@
 
         function onChanged(soba) {
             console.log(soba);
-            if (soba.ucesnici.length != 0) {
-                $("#nemaucesnika").addClass("nodisplay");
+            if (soba.igraci.length != 0) {
+                $("#nemaigraca").addClass("nodisplay");
             } else {
-                $("#nemaucesnika").removeClass("nodisplay");
+                $("#nemaigraca").removeClass("nodisplay");
             }
 
-            $("#ucesnici").empty();
-            soba.ucesnici.forEach(e => $("#ucesnici").append(`<p class="m-0"><img class="p-1" src="static/avatari/${e.avatar}.png" style="height:2rem">${e.ime}</p>`))
-            
-            if(soba.stanje == "countdown") {
+            $("#igraci").empty();
+            soba.igraci.forEach(e => $("#igraci").append(`<p class="m-0"><img class="p-1" src="static/avatari/${e.avatar}.png" style="height:2rem">${e.ime}</p>`))
+
+            if (soba.stanje == "countdown") {
                 $("#ulaz").addClass("nodisplay");
                 $("#countdownDiv").removeClass("nodisplay");
 
                 $("#countdown").html(soba.countdown);
             }
 
-            if(soba.stanje == "pitanje") {
+            if (soba.stanje == "pitanje") {
                 $("#ulaz").addClass("nodisplay");
                 $("#countdownDiv").addClass("nodisplay");
                 $("#pitanje").removeClass("nodisplay");
@@ -88,15 +135,51 @@
         }
 
 
-        $("#zapocniButton").on("click", function () {
-            zapocniSobu();
+    </script>
+    <script>
+        $(window).on('load', function () {
+
+            $("#vrijemePitanja").on("input change", function () { 
+                $("#vrijemePitanjaLabel").html("Vrijeme pitanja: " + $("#vrijemePitanja").val() + "s");
+            });
+
+            $("#zapocniButton").on("click", function () {
+                zapocniSobu();
+            });
+
+
         });
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "300px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+
+
+        // #vrijemePitanja is a slider. Modify vrijemePitanjaLabel to represent its value
+
+
+
 
     </script>
-
 </head>
 
 <body class="bg-info">
+
+    <div id="mySidebar" class="sidebar ">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <label for="vrijemePitanja" class="form-label text-white p-2" id="vrijemePitanjaLabel">Vrijeme pitanja: 15s</label>
+        <input type="range" class="form-range p-2" min="5" max="60" step="5" value="15" id="vrijemePitanja">
+    </div>
+
+    <div id="main">
+        <button class="openbtn" onclick="openNav()"><span class="material-symbols-outlined" style="font-size:60px;">
+                settings
+            </span></button>
+    </div>
+
     <div class="h-100 d-flex justify-content-center align-items-center text-white">
         <div id="ulaz">
             <h1>KÔD ZA SOBU:</h1>
@@ -106,8 +189,8 @@
             </div>
             <div class="m-4">
                 Učesnici:
-                <div class="border border-light rounded   p-2" id="ucesnici">
-                    <div class="text-muted" id="nemaucesnika">Nema učesnika</div>
+                <div class="border border-light rounded   p-2" id="igraci">
+                    <div class="text-muted" id="nemaigraca">Nema učesnika</div>
                 </div>
             </div>
             <div class="d-flex justify-content-center">

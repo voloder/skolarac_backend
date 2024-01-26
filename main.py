@@ -55,7 +55,10 @@ async def odabir(event : str, sid : str, data : str):
     
     igrac = soba.nadji_igraca(data["igrac"]["ime"], data["igrac"]["avatar"])
     
-    igrac.odabir = data["odgovor"]
+    if(data["odgovor"] is not None):
+        if(["a", "b", "c", "d"][data["odgovor"]] == soba.pitanje.tacan):
+            igrac.poeni += 5
+
     
 
 async def update_sobu(soba : Soba):
@@ -81,12 +84,7 @@ async def zapocni_sobu(soba : Soba):
         
         soba.stanje = "pitanje"
         await odbroji(soba, soba.vrijeme_pitanja)
-        
-        for igrac in soba.igraci:
-            if(igrac.odabir is not None):
-                if(["a", "b", "c", "d"][igrac.odabir] == soba.pitanje.tacan):
-                    igrac.poeni += 5
-            
+
         soba.stanje = "otkrij"
         await odbroji(soba, soba.vrijeme_otkrivanja)
     

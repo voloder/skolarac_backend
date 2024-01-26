@@ -4,7 +4,6 @@ from pydantic import BaseModel
 class Igrac(BaseModel):
     ime: str
     avatar: int
-    odabir: Optional[int] = None
     poeni: int = 0
     
     

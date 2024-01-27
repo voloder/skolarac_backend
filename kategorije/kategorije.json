@@ -58,6 +58,19 @@
                     "path": "Historija/srednji_vijek.json"
                 }
             ]
-        }
+        },
+        {
+            "naziv": "Geografija",
+            "potkategorije": [
+                {
+                    "naziv": "Geološka prošlost zemlje",
+                    "path": "Geografija/geoloska_proslost_zemlje.json"
+                }
+                {
+                    "naziv": "Geografske karte",
+                    "path": "Geografija/geografske_karte.json"
+                }
+            ]
+        },
     ]
 }

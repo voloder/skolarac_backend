@@ -1,0 +1,100 @@
+{
+    "pitanja": [
+        {
+            "pitanje": "Koja od sljedećih legendi na karti pruža informacije o simbolima i njihovim značenjima?",
+            "a": "Naslov legende",
+            "b": "Ključ legende",
+            "c": "Skala legende",
+            "d": "Opis legende",
+            "tacan": "b"
+        },
+      {
+            "pitanje": "Kako se naziva mjerilo na karti koje prikazuje omjer stvarnih udaljenosti na terenu i udaljenosti na karti?",
+            "a": "Skala",
+            "b": "Legenda",
+            "c": "Naslov",
+            "d": "Orijetacija",
+            "tacan": "a"
+        },
+      {
+            "pitanje": "Koja od sljedećih projekcija karte održava pravilne oblike, ali izobličuje veličinu i udaljenosti?",
+            "a": "Azimutalna projekcija",
+            "b": "Robinsonova projekcija",
+            "c": "Konformalna projekcija",
+            "d": "Merkatorska projekcija",
+            "tacan": "d"
+        },
+      {
+            "pitanje": "Koje geografske koordinate određuju položaj tačke sjeverno ili južno od ekvatora?",
+            "a": "Geografska dužina",
+            "b": "Geografska širina",
+            "c": "Ekvatorijalne koordinate",
+            "d": "Meridijanske koordinate",
+            "tacan": "b"
+        },
+      {
+            "pitanje": "Koja od sljedećih vrsta karata prikazuje nadmorsku visinu terena i reljef?",
+            "a": "Topografska karta",
+            "b": "Politčka karta",
+            "c": "Fizička karta",
+            "d": "Tematska karta",
+            "tacan": "c"
+        },
+      {
+            "pitanje": "Koja se linija na karti nalazi na jednakoj udaljenosti od oba pola i označava nulti stepen geografske dužine?",
+            "a": "Ekvator",
+            "b": "Meridijan",
+            "c": "Tropski krug",
+            "d": "Međunarodna datumska granica",
+            "tacan": "a"
+        },
+      {
+            "pitanje": "Koja od sljedećih nije primarni element svake karte?",
+            "a": "Naslov",
+            "b": "Skala",
+            "c": "Legenda",
+            "d": "Ekvator",
+            "tacan": "d"
+        },
+      {
+            "pitanje": "Koja je vrsta karte posebno dizajnirana za navigaciju na moru i prikazuje dubine oceana?",
+            "a": "Topografska karta",
+            "b": "Navigacijska karta",
+            "c": "Fizička karta",
+            "d": "Klimatska karta",
+            "tacan": "b"
+        },
+      {
+            "pitanje": "Što označava okomita linija na karti koja povezuje točke jednake visine?",
+            "a": "Azimut",
+            "b": "Izohiza",
+            "c": "Izolinija",
+            "d": "Isobar",
+            "tacan": "c"
+        },
+      {
+            "pitanje": "Koja od sljedećih linija dijeli Zemlju na istočnu i zapadnu hemisferu?",
+            "a": "Ekvator",
+            "b": "Meridijan",
+            "c": "Tropski krug",
+            "d": "Polarni krug",
+            "tacan": "b"
+        },
+      {
+            "pitanje": "Koje se koordinate koriste za određivanje položaja tačke istočno ili zapadno od nultog meridijana?",
+            "a": "Geografska širina",
+            "b": "Ekliptičke koordinate",
+            "c": "Ekvatorialne koordinate",
+            "d": "Geografska dužina",
+            "tacan": "d"
+        },
+      {
+            "pitanje": "Koje su linije na karti koje povezuju tačke s istom temperaturom ili količinom oborina?",
+            "a": "Izolinije",
+            "b": "Izohale",
+            "c": "Izoterme",
+            "d": "Izobare",
+            "tacan": "c"
+        }
+    ]
+}

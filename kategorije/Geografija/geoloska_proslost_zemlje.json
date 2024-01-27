@@ -1,0 +1,116 @@
+{
+    "pitanja": [
+      {
+            "pitanje": "Koji je period geološke ere poznat po razvoju prvih višestaničnih organizama i pojavi prvih fosila?",
+            "a": "Silur",
+            "b": "Kambrij",
+            "c": "Devon",
+            "d": "Karbon",
+            "tacan": "b"
+        },
+      {
+            "pitanje": "Koje stijene često čuvaju fosile i koriste se za proučavanje fosilnih ostataka?",
+            "a": "Magmatske stijene",
+            "b": "Metamorfne stijene",
+            "c": "Sedimentne stijene",
+            "d": "Kristalne stijene",
+            "tacan": "c"
+        },
+      {
+            "pitanje": "Koje geološko razdoblje karakterizira raznolika eksplozija života, uključujući prve reptile",
+            "a": "Trijas",
+            "b": "Perm",
+            "c": "Jura",
+            "d": "Kreda",
+            "tacan": "a"
+        },
+      {
+            "pitanje": "",
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": "",
+            "tacan": ""
+        },
+      {
+            "pitanje": "Koji je proces formiranja fosila u kojem se minerali zamjenjuju s organskim materijalom, stvarajući kameni otisak?",
+            "a": "Kamenizacija",
+            "b": "Impresija",
+            "c": "Moldiranje",
+            "d": "Petrifikacija",
+            "tacan": "d"
+        },
+      {
+            "pitanje": "Koji se pojam koristi za označavanje doba kada su dinosauri izumrli?",
+            "a": "Pleistocen",
+            "b": "Jura",
+            "c": "Kreda",
+            "d": "Paleogen",
+            "tacan": "c"
+        },
+      {
+            "pitanje": "Koji je period geološke ere karakteriziran stvaranjem superkontinenta Pangea?",
+            "a": "Silur",
+            "b": "Devon",
+            "c": "Karbon",
+            "d": "Permski",
+            "tacan": "d"
+        },
+      {
+            "pitanje": "Koji se tip fosila sastoji od tragova, otisaka i drugih oblika života, a ne stvarnih ostataka organizama?",
+            "a": "Ostaci",
+            "b": "Ichnofosili",
+            "c": "Abiotski fosili",
+            "d": "Mikrofosili",
+            "tacan": "b"
+        },
+      {
+            "pitanje": "Koji je kontinent često nazivan 'kontinentom fosila' zbog obilja fosilnih nalaza?",
+            "a": "Sjeverna Amerika",
+            "b": "Južna Amerika",
+            "c": "Evropa",
+            "d": "Afrika",
+            "tacan": "a"
+        },
+      {
+            "pitanje": "Koje razdoblje geološke ere karakterizira širenje praplanina i pojedinih vodenih organizama?",
+            "a": "Ordovik",
+            "b": "Devon",
+            "c": "Karbon",
+            "d": "Silur",
+            "tacan": "a"
+        },
+      {
+            "pitanje": "Koji geološki period označava početak ere kada su se prvi put pojavili pravi kičmenjaci?",
+            "a": "Kambrij",
+            "b": "Karbon",
+            "c": "Silur",
+            "d": "Devon",
+            "tacan": "a"
+        },
+      {
+            "pitanje": "Koje se stijene često koriste za datiranje starijih fosila zbog njihove stabilnosti i relativne čestoće?",
+            "a": "Granit",
+            "b": "Bazalt",
+            "c": "Pješčenjak",
+            "d": "Krečnjak",
+            "tacan": "b"
+        },
+      {
+            "pitanje": "Koji je postupak datiranja fosila temeljen na raspadau radioaktivnih izotopa?",
+            "a": "Radiokarbonsko datiranje",
+            "b": "Ar-ar datiranje",
+            "c": "Datiranje termoluminiscencije",
+            "d": "Datiranje urana-olovka",
+            "tacan": "d"
+        },
+      {
+            "pitanje": "Koji geološki period označava kraj ere dinosaura i početak razvoja sisavaca?",
+            "a": "Paleogen",
+            "b": "Kreda",
+            "c": "Neogen",
+            "d": "Kvartar",
+            "tacan": "a"
+        }
+    ]
+}

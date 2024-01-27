@@ -14,20 +14,25 @@ class Pitanje(BaseModel):
     c: str
     d: str
     tacan: str
-
+    
+class SobaPostavke(BaseModel):
+    broj_pitanja: int = 10
+    vrijeme_pitanja : int = 20
+    vrijeme_otkrivanja : int = 3
+   
+    kategorije: List[str]
+    custom_pitanja: List[Pitanje]
+    
 class Soba(BaseModel):
     kod: str
     igraci: List[Igrac]
     countdown: int = 0
     pitanje: Pitanje | None = None
     stanje: str = "cekanje"
-    vrijeme_pitanja: int = 10
-    vrijeme_otkrivanja: int = 3
-    
-    broj_pitanja: int = 10
     trenutno_pitanje: int = 0
-    kategorije: List[str] = []
     
-    
+    postavke : SobaPostavke
+        
     def nadji_igraca(self, ime, avatar) -> Igrac:
         return [igrac for igrac in self.igraci if (igrac.ime, igrac.avatar) == (ime, avatar)][0]
+

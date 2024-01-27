@@ -29,10 +29,12 @@ async def udji(kod : str, igrac : Igrac) -> Soba:
             return soba
     raise HTTPException(status_code=404, detail="Soba ne postoji")
 
-@app.get("/sobe/kreiraj/")
-async def kreiraj() -> str:
+@app.post("/sobe/kreiraj/")
+async def kreiraj(postavke : SobaPostavke) -> str:
+
     kod = str(random.randint(1000, 9999))
-    soba = Soba(kod=kod, igraci=[])
+    soba = Soba(kod=kod, igraci=[], postavke=postavke)
+    print(soba.postavke.kategorije)
     sobe.append(soba)
     asyncio.create_task(cisti(soba))
     return kod
@@ -53,13 +55,36 @@ async def napusti(igrac : Igrac):
             return 200
     raise HTTPException(status_code=404, detail="Soba ne postoji")
     
+@app.get("/kategorije/")
+async def kategorije():
+    response = []
+    
+    with open("kategorije/kategorije.json", encoding="utf8") as f:
+        kategorije = json.load(f)["kategorije"]
+    
+    for kategorija in kategorije:
+        k = {
+            "naziv": kategorija["naziv"],
+            "potkategorije": []
+        }
+        
+        for potkategorija in kategorija["potkategorije"]:
+            with open("kategorije/" + potkategorija["path"], encoding="utf8") as f:
+                pitanja = json.load(f)["pitanja"]
+            
+            k["potkategorije"].append({
+                "naziv": potkategorija["naziv"],
+                "broj": len(pitanja)
+            })
+            
+        response.append(k)
+
+    return {"kategorije": response}
 
 @sio.on('*')
 async def odabir(event : str, sid : str, data : str):
     if(not event.startswith("odabir_")):
         return
-    
-    #data = json.loads(data)
     
     kod = event.replace("odabir_", "")
     soba = nadji_sobu(kod)
@@ -71,10 +96,13 @@ async def odabir(event : str, sid : str, data : str):
             igrac.poeni += 5
 
 
-    
-
 async def update_sobu(soba : Soba):
-    await sio.emit("soba_" + soba.kod, soba.model_dump_json())
+    s = soba.model_dump()
+    
+    s["postavke"].pop("custom_pitanja")
+    s["postavke"].pop("kategorije")
+    
+    await sio.emit("soba_" + soba.kod, json.dumps(s))
     
 async def odbroji(soba : Soba, vrjeme : int):
     for t in range(vrjeme, 0, -1):
@@ -89,38 +117,42 @@ async def zapocni_sobu(soba : Soba):
         
     await odbroji(soba, 3)
      
-    pitanja = ucitaj_pitanja()
+    pitanja = ucitaj_pitanja(soba.postavke)
     
-    for i in range(10):
+    for i in range(len(pitanja)):
         soba.trenutno_pitanje = i + 1
         soba.pitanje = pitanja[i]
         
         soba.stanje = "pitanje"
-        await odbroji(soba, soba.vrijeme_pitanja)
+        await odbroji(soba, soba.postavke.vrijeme_pitanja)
         
         soba.stanje = "otkrij"
         await update_sobu(soba)
-        await odbroji(soba, soba.vrijeme_otkrivanja)
+        await asyncio.sleep(1)
+        await odbroji(soba, soba.postavke.vrijeme_otkrivanja)
     
     soba.stanje = "zavrseno"
     await update_sobu(soba)
     sobe.remove(soba)
 
 
-def ucitaj_pitanja() -> List[Pitanje]:
-    f = open("kategorije/Historija/prvi_svjetski_rat.json", encoding="utf8")
-    pitanja = []
-    for pitanje in json.load(f)["pitanja"]:
-        pitanja.append(Pitanje(pitanje=pitanje["pitanje"],
-                               a=pitanje["a"], 
-                               b=pitanje["b"],
-                               c=pitanje["c"], 
-                               d=pitanje["d"], 
-                               tacan=pitanje["tacan"]
-                               ))
-    f.close()
+def ucitaj_pitanja(postavke : SobaPostavke) -> List[Pitanje]:
+    pitanja = postavke.custom_pitanja
+    
+    f = open("kategorije/kategorije.json", encoding="utf8")
+    kategorije = json.load(f)["kategorije"]
+    
+    for kategorija in kategorije:
+        for potkategorija in kategorija["potkategorije"]:
+            print(potkategorija["naziv"], postavke.kategorije)
+            if potkategorija["naziv"] in postavke.kategorije:
+                f = open("kategorije/" + potkategorija["path"], encoding="utf8")
+                for p in json.load(f)["pitanja"]:
+                    pitanja.append(Pitanje(**p))
+                f.close()
+
     random.shuffle(pitanja)
-    return pitanja
+    return pitanja[:postavke.broj_pitanja]
 
 def nadji_sobu(kod : str) -> Soba:
     return [soba for soba in sobe if soba.kod == kod][0]

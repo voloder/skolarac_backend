@@ -69,6 +69,7 @@ async def kategorije():
         }
         
         for potkategorija in kategorija["potkategorije"]:
+            print("UCITAVANJE", potkategorija["path"])
             with open("kategorije/" + potkategorija["path"], encoding="utf8") as f:
                 pitanja = json.load(f)["pitanja"]
             

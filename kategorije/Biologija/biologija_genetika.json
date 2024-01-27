@@ -1,0 +1,165 @@
+
+{
+    "pitanja": [
+        {
+            "pitanje": "Šta je Genetika?",
+            "a": "Nauka o organskom ili biološkom nasljeđivanju",
+            "b": "Nauka o ćeliji",
+            "c": "Nauka o tkivima",
+            "d": "Nauka o zaštiti životne sredine",
+            "tacan": "a"
+        },
+        {
+            "pitanje": "Šta je gen?",
+            "a": "Segment DNK koji nosi informaciju za sintezu proteina ",
+            "b": "Set homologih hromosoma",
+            "c": "Molekule u sklopu DNK",
+            "d": "Segment RNK koji se sastoji od egzona i introna koji nose informaciju za sintezu proteina",
+            "tacan": "a"
+        },
+        {
+            "pitanje":"Transkripcija je:",
+            "a":"Sinteza DNK u interfazi ćelijskog ciklusa",
+            "b":"Sinteza iRNK prepisivanjem sa jednog od lanaca DNK",
+            "c":"Prepis DNK sa lanca RNK u ribosomima",
+            "d":"Prepisivanje DNK u ribosomima",
+            "tacan": "b"
+        },
+        {
+            "pitanje":"Na polovima diobnog vretena nalaze se:",
+            "a":"Centromere",
+            "b":"Ribosomi",
+            "c":"Centrosomi",
+            "d":"Nukleosomi",
+            "tacan":"a"
+        },
+        {
+            "pitanje":"Ribosomi se povezuju u polizome preko:",
+            "a":"Kratke sekvence DNK molekula",
+            "b":"Molekula tRNK",
+            "c":"Proteina histona",
+            "d":"Molekula iRNK",
+            "tacan":"d"
+        },
+        {
+            "pitanje":"Šta je konjugacija?",
+            "a":"Proces razmjene gena između tri bakterije",
+            "b":"Rekombinacija genetskog materijala",
+            "c":"Proces razmjene gena između dvije bakterije",
+            "d":"Kloniranje genetskog materijala",
+            "tacan":"c"
+        },
+        {
+            "pitanje":"Mutacije gena su uvijek:",
+            "a":"Spontane mutacije",
+            "b":"Inducirane mutacije",
+            "c":"Nasljedne promjene gena",
+            "d":"Dominantne",
+            "tacan":"c"
+        },
+        {
+            "pitanje":"Od čega se nukleotid sastoji?",
+            "a":"Purinske ili pirimidinske baze koje je vezana za šećer",
+            "b":"Purinske ili pirimidinske baze koja nije vezana na šećer",
+            "c":"Purinske ili pirimidinske baze koja je vezana na fosfatni ostatak",
+            "d":"Purinske ili pirimidinske baze koja je vezana na šećer i fosfatni ostatak",
+            "tacan":"d"
+        },
+        {
+            "pitanje":"U mejozi, hromosom se sastoji od jedne hromatide u:",
+            "a":"Telofazi I",
+            "b":"Telofazi II",
+            "c":"Profazi I",
+            "d":"Profazi II",
+            "tacan":"b"
+        },
+        {
+            "pitanje":"Po čemu se homologi hromosomi međusobno razlikuju:",
+            "a":"Veličini",
+            "b":"Obliku",
+            "c":"Položaju centromere",
+            "d":"Porijeklu",
+            "tacan":"d"
+        },
+        {
+            "pitanje":"Koja ćelija ima 23 hromosoma kod čovjeka?",
+            "a":"Ćelija u pahitenu",
+            "b":"Ćelija u metafazi I mejotičke diobe",
+            "c":"Oplođena jajna ćelija",
+            "d":"Ćelija u metafazi II mejotičke dio",
+            "tacan":"d"
+        },
+        {
+            "pitanje":"Matrica (kalup) za autoreprodukciju molekula dvolančane DNK je:",
+            "a":"Samo jedan lanac već postojeće DNK",
+            "b":"Oba lanca već postojeće DNK",
+            "c":"iRNK",
+            "d":"rRNK",
+            "tacan":"b"
+        },
+        {
+            "pitanje":"Šta je osnovni pojam genetike populacije?",
+            "a":"Genska frekvencija",
+            "b":"Genetički materijal",
+            "c":"Genetička ravnoteža",
+            "d":"Gen",
+            "tacan":"a"
+        },
+        {
+            "pitanje":"Šta je poliploidija?",
+            "a":"Promjena broja hromosoma u spolnim ćelijama",
+            "b":"Smanjenje broja hromosoma u somatskim ćelijama",
+            "c":"Promjena broja hromosoma u somatskim ćelijama",
+            "d":"Smanjenje broja hromosoma u spolnim ćelijama",
+            "tacan":"c"
+        },
+        {
+            "pitanje":"Proces koji ne može da se odigra bez direktnog učešća ribozoma je:",
+            "a":"Translacija",
+            "b":"Replikacija",
+            "c":"Transkripcija",
+            "d":"Dioba",
+            "tacan":"a"
+        },
+        {
+            "pitanje":"Koje bolesti se nasljeđuju autosomalno?",
+            "a":"Srpasta anemija",
+            "b":"Mišićna distrofija",
+            "c":"Hemofilija",
+            "d":"Ciroza jetre",
+            "tacan":"a"
+        },
+        {
+            "pitanje":"Hromozomi kod kojih je centromera na samom vrhu hromosoma tako da jedan krak praktično ne postoji su: ",
+            "a":"Akrocentrični",
+            "b":"Telocentrični",
+            "c":"Submetacentrični",
+            "d":"Metacentrični",
+            "tacan":"b"
+        },
+        {
+            "pitanje":"Insercija je:",
+            "a":"Umetanje",
+            "b":"Supstitucija",
+            "c":"Supresija",
+            "d":"Delecija",
+            "tacan":"a"
+        },
+        {
+            "pitanje":"Promjene genetičke osnove na nivou nukleotida nazivaju se:",
+            "a":"Modifikacije",
+            "b":"Genske mutacije",
+            "c":"Plejotropija",
+            "d":"Epistaze",
+            "tacan":"b"
+        },
+        {
+            "pitanje":"Koja od navedenih podfaza profaze I je produžena kod ženki sisara:",
+            "a":"Leptoten",
+            "b":"Zigoten",
+            "c":"Pahiten",
+            "d":"Diploten",
+            "tacan":"d"
+        }
+    ]
+}

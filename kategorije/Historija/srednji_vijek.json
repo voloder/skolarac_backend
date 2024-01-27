@@ -1,0 +1,84 @@
+{
+    "pitanja": [
+        {
+            "pitanje": "Koje godine započinje srednji vijek?",
+            "a": "413. godine",
+            "b": "476. godine",
+            "c": "397. godine",
+            "d": "458. godine",
+            "tacan": "b"
+        },
+        {
+            "pitanje": "Koji novi društveni poredak nastaje u srednjem vijeku?",
+            "a": "Monarhija",
+            "b": "Oligarhija",
+            "c": "Plemensko uređenje",
+            "d": "Feudalizam",
+            "tacan": "d"
+        },
+        {
+            "pitanje": "Ko je bio vlasnik feudalnog posjeda i odgovoran direktno kralju?",
+            "a": "Kmet",
+            "b": "Vitez",
+            "c": "Plemić",
+            "d": "Vojnik",
+            "tacan": "c"
+        },
+        {
+            "pitanje": "Koja je uloga vazala u feudalnom sustavu?",
+            "a": "Raditi na poljoprivrednom imanju",
+            "b": "Trgovati sa susjednim kmetovima",
+            "c": "Upravljati crkvom u selu",
+            "d": "Pružati vojničku službu svom gospodaru",
+            "tacan": "d"
+        },
+        {
+            "pitanje": "Koji su se događaji obilježili kraj feudalizma u Evropi",
+            "a": "Francuska revolucija",
+            "b": "Prvi svjetski rat",
+            "c": "Rimski zaključci",
+            "d": "Osmanski osvajanja",
+            "tacan": "a"
+        },
+        {
+            "pitanje": "Šta je bio glavni uzrok Velike seobe naroda?",
+            "a": "Ekonomske teškoće",
+            "b": "Invazije Mongola",
+            "c": "Religijski sukobi",
+            "d": "Pad Rimskog Carstva i pritisak nomadskih naroda",
+            "tacan": "d"
+        },
+        {
+            "pitanje": "Koje etničke skupine su bile uključene u Veliku seobu naroda?",
+            "a": "Sami i Finci",
+            "b": "Germanske i azijske plemene",
+            "c": "Slaveni i Iliri",
+            "d": "Kinezi i Mongoli",
+            "tacan": "b"
+        },
+        {
+            "pitanje": "Ko je bio prvi papa Crkve u ranom srednjem vijeku?",
+            "a": "Pavao I",
+            "b": "Petar",
+            "c": "Grgur I",
+            "d": "Klement",
+            "tacan": "c"
+        },
+        {
+            "pitanje": "Kako se naziva proces širenja kršćanstva među poganskim narodima u Evropi?",
+            "a": "Evangelizacija",
+            "b": "Inkvizicija",
+            "c": "Koncil",
+            "d": "Hereza",
+            "tacan": "a"
+        },
+        {
+            "pitanje": "Kako se nazivaju crkveni sudovi koji su se bavili suđenjem za herezu u srednjem vijeku?",
+            "a": "Inkvizicija",
+            "b": "Koncil",
+            "c": "Sinoda",
+            "d": "Pravosuđe",
+            "tacan": "a"
+        }
+    ]
+}

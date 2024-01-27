@@ -23,8 +23,9 @@ sobe: List[Soba] = []
 async def udji(kod : str, igrac : Igrac) -> Soba:
     for soba in sobe:
         if soba.kod == kod:
-            soba.igraci.append(igrac)
-            await sio.emit("soba_" + soba.kod, soba.model_dump_json())
+            if igrac not in soba.igraci:
+                soba.igraci.append(igrac)
+            await update_sobu(soba)
             return soba
     raise HTTPException(status_code=404, detail="Soba ne postoji")
 
@@ -42,6 +43,16 @@ async def zapocni(kod : str):
     asyncio.create_task(zapocni_sobu(soba))
     return 200
 
+@app.post("/sobe/napusti/")
+async def napusti(igrac : Igrac):
+    for soba in sobe:
+        if igrac in soba.igraci:
+            print(igrac)
+            soba.igraci.remove(igrac)
+            await update_sobu(soba)
+            return 200
+    raise HTTPException(status_code=404, detail="Soba ne postoji")
+    
 
 @sio.on('*')
 async def odabir(event : str, sid : str, data : str):
@@ -54,10 +65,11 @@ async def odabir(event : str, sid : str, data : str):
     soba = nadji_sobu(kod)
     
     igrac = soba.nadji_igraca(data["igrac"]["ime"], data["igrac"]["avatar"])
-    
+    print(data["odgovor"])
     if(data["odgovor"] is not None):
         if(["a", "b", "c", "d"][data["odgovor"]] == soba.pitanje.tacan):
             igrac.poeni += 5
+
 
     
 
@@ -80,12 +92,14 @@ async def zapocni_sobu(soba : Soba):
     pitanja = ucitaj_pitanja()
     
     for i in range(10):
+        soba.trenutno_pitanje = i + 1
         soba.pitanje = pitanja[i]
         
         soba.stanje = "pitanje"
         await odbroji(soba, soba.vrijeme_pitanja)
-
+        
         soba.stanje = "otkrij"
+        await update_sobu(soba)
         await odbroji(soba, soba.vrijeme_otkrivanja)
     
     soba.stanje = "zavrseno"
@@ -94,7 +108,7 @@ async def zapocni_sobu(soba : Soba):
 
 
 def ucitaj_pitanja() -> List[Pitanje]:
-    f = open("biologija_celije.json")
+    f = open("kategorije/Historija/prvi_svjetski_rat.json", encoding="utf8")
     pitanja = []
     for pitanje in json.load(f)["pitanja"]:
         pitanja.append(Pitanje(pitanje=pitanje["pitanje"],

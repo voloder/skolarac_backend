@@ -1,0 +1,84 @@
+{
+    "pitanja": [
+        {
+            "pitanje": "Kako se tvori afirmativna rečenica u Past Continuous?",
+            "a": "Subjekt + am/are/is + glagol u osnovnom obliku + dodatak -ing",
+            "b": "Subjekt + glagol u prošlom vremenu + objekt",
+            "c": "Subjekt + was/were + glagol u osnovnom obliku + dodatak -ing",
+            "d": "Subjekt + did + glagol u osnovnom obliku",
+            "tacan": "c"
+        },
+        {
+            "pitanje": "Kada koristimo Past Continuous?",
+            "a": "Za opisivanje redovnih radnji",
+            "b": "Za opisivanje prošlih događaja ili situacija koje su završile",
+            "c": "Samo za buduće radnje",
+            "d": "Samo za sadašnje događaje",
+            "tacan": "b"
+        },
+        {
+            "pitanje": "Kako se tvori upitna rečenica u Past Continuous?",
+            "a": "Invertiranjem was/were i subjekta",
+            "b": "Dodavanjem -ing na glagol",
+            "c": "Dodavanjem not ispred glagola",
+            "d": "Invertiranjem pomoćnog glagola do/does i subjekta",
+            "tacan": "a"
+        },
+        {
+            "pitanje": "Kada koristimo Past Continuous za opisivanje prošlih radnji?",
+            "a": "Kada želimo izraziti planirane ili dogovorene aktivnosti",
+            "b": "Kada želimo opisati trenutne radnje koje se događaju sada",
+            "c": "Kada želimo opisati činjenice i opće istine",
+            "d": "Kada želimo opisati prošle događaje ili situacije koje su trajale određeno vrijeme",
+            "tacan": "d"
+        },
+        {
+            "pitanje": "Koja od sljedećih rečenica koristi Past Continuous ispravno u pitanju?",
+            "a": "Was she cooking dinner at 7 PM?",
+            "b": "Was you playing the guitar?",
+            "c": "Were they didn't go to the party?",
+            "d": "Were we were working yesterday?",
+            "tacan": "a"
+        },
+        {
+            "pitanje": "Kako se tvori negativna rečenica u Past Continuous?",
+            "a": "Dodavanjem -ing na glagol",
+            "b": "Dodavanjem not ispred glagola",
+            "c": "Invertiranjem pomoćnog glagola do/does i subjekta",
+            "d": "Invertiranjem was/were i subjekta",
+            "tacan": "b"
+        },
+        {
+            "pitanje": "Koja rečenica koristi pravilan red riječi za negaciju u Past Continuous?",
+            "a": "They wasn't playing tennis",
+            "b": "She not were cooking dinner",
+            "c": "I wasn't liking the movie",
+            "d": "We didn't playing video games",
+            "tacan": "c"
+        },
+        {
+            "pitanje": "Koji oblik ima glagol to be za treće lice jednine u Past Continuous?",
+            "a": "was",
+            "b": "were",
+            "c": "am",
+            "d": "is",
+            "tacan": "a"
+        },
+        {
+            "pitanje": "Koja od sljedećih rečenica koristi Past Continuous ispravno u pitanju?",
+            "a": "Is she were watching TV?",
+            "b": "Did he were reading a book?",
+            "c": "Was I am studying for the exam?",
+            "d": "Were they playing basketball?",
+            "tacan": "d"
+        },
+        {
+            "pitanje": "Koji od sljedećih izraza obično prati Past Continuous?",
+            "a": "Every day",
+            "b": "Last night",
+            "c": "Now",
+            "d": "Next week",
+            "tacan": "b"
+        }
+    ]
+}

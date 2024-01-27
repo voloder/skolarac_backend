@@ -1,0 +1,84 @@
+{
+    "pitanja": [
+        {
+            "pitanje": "Koje godine je započeo Prvi svjetski rat?",
+            "a": "1912",
+            "b": "1914",
+            "c": "1916",
+            "d": "1918",
+            "tacan": "b"
+        },
+        {
+            "pitanje": "Koje zemlje su sačinjavale Trojni Savez u 1. svjetskom ratu?",
+            "a": "Njemačka, Austro-Ugarska i Italija",
+            "b": "Francuska, Rusija i Velika Britanija",
+            "c": "Bugarska, Rumunjska i Srbija",
+            "d": "Sjedinjene Američke Države, Velika Britanija i Japan",
+            "tacan": "a"
+        },
+        {
+            "pitanje": "Koja zemlja je prva koristila hemijsko oružje tijekom Prvog svjetskog rata?",
+            "a": "Francuska",
+            "b": "Rusija",
+            "c": "Velika Britanija",
+            "d": "Njemačka",
+            "tacan": "d"
+        },
+        {
+            "pitanje": "Koji događaj se smatra okidačem za početak Prvog svjetskog rata?",
+            "a": "Loši odnosi između Amerike i Rusije",
+            "b": "Bitka kod Verduna",
+            "c": "Atentat u Sarajevu",
+            "d": "Napad Njemačke na Poljsku",
+            "tacan": "c"
+        },
+        {
+            "pitanje": "Koja je zemlja napustila rat 1917. godine zbog revolucije koja se odvijala unutar zemlje?",
+            "a": "Rusija",
+            "b": "Francuska",
+            "c": "Italija",
+            "d": "Japan",
+            "tacan": "a"
+        },
+        {
+            "pitanje": "Koje oružje je prvi put masovno korišteno u Prvom svjetskom ratu, mijenjajući dinamiku rata?",
+            "a": "Avioni",
+            "b": "Tenkovi",
+            "c": "Podmornice",
+            "d": "Topovi",
+            "tacan": "b"
+        },
+        {
+            "pitanje": "Koje tajno oružje je Njemačka koristila kako bi potaknula Meksiko na rat protiv Sjedinjenih Američkih Država?",
+            "a": "Topnički rov",
+            "b": "Hemijsko oružje",
+            "c": "Podmornice",
+            "d": "Telegram Zimmermann",
+            "tacan": "d"
+        },
+        {
+            "pitanje": "Koji događaj iz 1917. godine je bio ključan za promjenu tijeka rata, s Amerikom koja ulazi u sukob na strani saveznika?",
+            "a": "Veliki Mart u Petrogradu",
+            "b": "Bitka kod Verduna",
+            "c": "Bitka kod Sommea",
+            "d": "Bitka kod Jutlanda",
+            "tacan": "a"
+        },  
+        {
+            "pitanje": "Koje godine je potpisan mirovni sporazum koji je označio kraj Prvog svjetskog rata?",
+            "a": "1917",
+            "b": "1918",
+            "c": "1919",
+            "d": "1920",
+            "tacan": "c"
+        },
+        {
+            "pitanje": "Koja je organizacija osnovana nakon Prvog svjetskog rata kako bi promicala suradnju među državama i spriječila buduće sukobe?",
+            "a": "NATO",
+            "b": "UN",
+            "c": "EU",
+            "d": "Varšavski pakt",
+            "tacan": "b"
+        }
+    ]
+}

@@ -1,0 +1,92 @@
+{
+    "pitanja": [
+        {
+            "pitanje": "Kada je prethistorijsko razdoblje započelo?",
+            "a": "Pronalaskom pisma",
+            "b": "Otkrićem vatre",
+            "c": "Nastankom čovjeka",
+            "d": "Otkrićem metala",
+            "tacan": ""
+        },
+        {
+            "pitanje": "Kako se drugačije zove starije kameno doba?",
+            "a": "Paleolit",
+            "b": "Neolit",
+            "c": "Mezolit",
+            "d": "Ni jedno od navedenih",
+            "tacan": "a"
+        },
+        {
+            "pitanje": "Koje je najbitnije otkriće u Paleolitu?",
+            "a": "Pismo",
+            "b": "Vatra",
+            "c": "Uzgoj stoke",
+            "d": "Posuđe",
+            "tacan": "b"
+        },
+        {
+            "pitanje": "Kada se smatra da je neolit započeo?",
+            "a": "Pravljenjem prvog luka i strijele",
+            "b": "Izgradnjom zemunica",
+            "c": "Pripitomljavanjem prvih životinja",
+            "d": "Pravljenjem prve kamene oštrice",
+            "tacan": "d"
+        },
+        {
+            "pitanje": "Koji je bio prvi otkriveni metal?",
+            "a": "Bakar",
+            "b": "Bronza",
+            "c": "Željezo",
+            "d": "Zlato",
+            "tacan": "a"
+        },
+        {
+            "pitanje": "Šta je karakteristično za neolitičko doba?",
+            "a": "Upotreba oruđa od bronze",
+            "b": "Gradnja primitivnih naselja",
+            "c": "Razvoj poljoprivrede i stočarstva",
+            "d": "Lov i sakupljanje hrane",
+            "tacan": "c"
+        },
+        {
+            "pitanje": "Koji je kontinent bio domovina primitivnih ljudi u paleolitu",
+            "a": "Južna Amerika",
+            "b": "Evropa",
+            "c": "Azija",
+            "d": "Afrika",
+            "tacan": "d"
+        },
+        {
+            "pitanje": "Koje se razdoblje smatra razdobljem izumiranja neandertalskog čovjeka?",
+            "a": "Paleolit",
+            "b": "Mezolit",
+            "c": "Neolit",
+            "d": "Metalno doba",
+            "tacan": "b"
+        },
+        {
+            "pitanje": "Šta je bio glavni element života u paleolitu?",
+            "a": "Lov i sakupljanje",
+            "b": "Poljoprivreda i stočarstvo",
+            "c": "Razvoj prvih tehnologija",
+            "d": "Gradnja naselja",
+            "tacan": "a"
+        },
+        {
+            "pitanje": "Koje je najstarije doba sa ljudskim tragovima u BiH?",
+            "a": "Mezolit",
+            "b": "Neolit",
+            "c": "Paleolit",
+            "d": "Metalno doba",
+            "tacan": "c"
+        },
+        {
+            "pitanje": "Ko je bio nosilac paleolitske kulture u BiH?",
+            "a": "Neandertalski čovjek",
+            "b": "Homo erectus",
+            "c": "Homo sapiens",
+            "d": "Ni jedan od navedenih",
+            "tacan": "a"
+        }
+    ]
+}

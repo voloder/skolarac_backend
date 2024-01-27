@@ -1,0 +1,84 @@
+{
+    "pitanja": [
+        {
+            "pitanje": "Kako tvorimo Present Continuous?",
+            "a": "Subjekt + glagol u prošlom vremenu + objekt",
+            "b": "Subjekt + am/are/is + glagol u osnovnom obliku + dodatak -ing",
+            "c": "Subjekt + do/does + glagol u osnovnom obliku + objekt",
+            "d": "Subjekt + will + glagol u osnovnom obliku",
+            "tacan": "b"
+        },
+        {
+            "pitanje": "Kada koristimo Present Continuous?",
+            "a": "Za opisivanje redovnih radnji",
+            "b": "Za opisivanje prošlih događaja",
+            "c": "Za opisivanje trenutnih radnji koje se događaju sada",
+            "d": "Samo u budućnosti",
+            "tacan": "c"
+        },
+        {
+            "pitanje": "Kako se tvori upitna rečenica u Present Continuous?",
+            "a": "Invertiranjem pomoćnog glagola do/does i subjekta",
+            "b": "Dodavanjem not ispred glagola",
+            "c": "Dodavanjem -ing na glagol",
+            "d": "Invertiranjem am/are/is i subjekta",
+            "tacan": "d"
+        },
+        {
+            "pitanje": "Kako se tvori negativna rečenica u Present Continuous?",
+            "a": "Dodavanjem -ing na glagol",
+            "b": "Dodavanjem not ispred glagol",
+            "c": "Invertiranjem pomoćnog glagola do/does i subjekt",
+            "d": "Dodavanjem -ed na glagol",
+            "tacan": "b"
+        },
+        {
+            "pitanje": "Koja od sljedećih rečenica koristi Present Continuous ispravno?",
+            "a": "We are having dinner at the moment.",
+            "b": "I am go to the store now.",
+            "c": "He am not playing football.",
+            "d": "They is studying for the exam.",
+            "tacan": "a"
+        },
+        {
+            "pitanje": "Koja rečenica koristi pravilan red riječi za negaciju u Present Continuous?",
+            "a": "She am not working tomorrow.",
+            "b": "We not are swimming in the pool.",
+            "c": "I am not liking that movie.",
+            "d": "They are not playing tennis now.",
+            "tacan": "d"
+        },
+        {
+            "pitanje": "Koji oblik ima glagol to be za treće lice jednine u Present Continuous?",
+            "a": "am",
+            "b": "are",
+            "c": "is",
+            "d": "be",
+            "tacan": "c"
+        },
+        {
+            "pitanje": "Koja od sljedećih rečenica koristi Present Continuous ispravno u pitanju?",
+            "a": "Is you watching TV now?",
+            "b": "Are they is studying for the test?",
+            "c": "Do she going to the party tonight?",
+            "d": "Am I playing the guitar right?",
+            "tacan": "d"
+        },
+        {
+            "pitanje": "Koji od sljedećih izraza obično prati Present Continuous?",
+            "a": "Every day",
+            "b": "Now",
+            "c": "Last year",
+            "d": "Next week",
+            "tacan": "b"
+        },
+        {
+            "pitanje": "Koja rečenica je ispravna u Present Continuous?",
+            "a": "They not are playing football.",
+            "b": "She playing is the piano.",
+            "c": "We are not having lunch now.",
+            "d": "He is swimming in the pool.",
+            "tacan": "d"
+        }
+    ]
+}

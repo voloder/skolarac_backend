@@ -1,0 +1,84 @@
+{
+    "pitanja": [
+        {
+            "pitanje": "Kako tvorimo Present Simple?",
+            "a": "od osnovnog oblika glagola, infinitiv bez “to” i nastavka -ed",
+            "b": "Od glagola to be + Present Participle glavnog glagola",
+            "c": "Od infinitiva glavnog glagola u svim licima osim trećeg lica jednine, gdje za sva tri roda dodamo -s ili -es",
+            "d": "Od infinitiva glavnog glagola u svim licima osim trećeg lica jednine, gdje za sva tri roda dodamo -ing",
+            "tacan": "c"
+        },
+        {
+            "pitanje": "Kada koristimo Present Simple?",
+            "a": "Za opise prošlih događaja",
+            "b": "Za opise budućih događaja",
+            "c": "Za opise trenutnih događaja",
+            "d": "Za opise sadašnjih stalnih ili redovnih radnji",
+            "tacan": "d"
+        },
+        {
+            "pitanje": "Koja od sljedećih rečenica koristi Present Simple ispravno?",
+            "a": "He goes to the store every day.",
+            "b": "They are going to the store now.",
+            "c": "She is going to the store yesterday.",
+            "d": "I am going to the store tomorrow.",
+            "tacan": "a"
+        },
+        {
+            "pitanje": "Koja od sljedećih negativnih rečenica u Present Simple za glagol “to be” (biti) je tačna?",
+            "a": "I am not go to school.",
+            "b": "She isn't at work.",
+            "c": "He not is at home.",
+            "d": "They not are happy.",
+            "tacan": "b"
+        },
+        {
+            "pitanje": "Kako se tvori upitna rečenica u Present Simple za većinu glagola?",
+            "a": "Invertiranjem pomoćnog glagola i subjekta",
+            "b": "Dodavanjem -ing na glagol",
+            "c": "Dodavanjem -s ili -es na glagol",
+            "d": "Invertiranjem subjekta i objekta",
+            "tacan": "a"
+        },
+        {
+            "pitanje": "Koja je ispravna afirmativna rečenica u Present Simple za glagol to work (raditi)?",
+            "a": "She not work on Mondays.",
+            "b": "He working in the garden now.",
+            "c": "I works in an office.",
+            "d": "They work hard every day.",
+            "tacan": "d"
+        },
+        {
+            "pitanje": "Koji od sljedećih izraza obično prati Present Simple?",
+            "a": "Yesterday",
+            "b": "Every day",
+            "c": "Tomorrow",
+            "d": "Last week",
+            "tacan": "b"
+        },
+        {
+            "pitanje": "Koja od sljedećih rečenica je ispravna u pitanju u Present Simple?",
+            "a": "Do you likes ice cream?",
+            "b": "Is she go to school?",
+            "c": "Does he like pizza?",
+            "d": "Do they goes to the park?",
+            "tacan": "c"
+        },
+        {
+            "pitanje": "Kako se tvori negativna rečenica za većinu glagola u Present Simple?",
+            "a": "Dodavanjem -ing na glagol",
+            "b": "Invertiranjem pomoćnog glagola i subjekta",
+            "c": "Dodavanjem not između glagola i pomoćnog glagola",
+            "d": "Dodavanjem -s ili -es na glagol",
+            "tacan": "c"
+        },
+        {
+            "pitanje": "Koji od sljedećih glagola koristi dodatak -es  u afirmativnim rečenicama u trećem licu jednine?",
+            "a": "Have",
+            "b": "Jump",
+            "c": "Write",
+            "d": "Do",
+            "tacan": "d"
+        }
+    ]
+}

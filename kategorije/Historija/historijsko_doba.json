@@ -1,0 +1,84 @@
+{
+    "pitanja": [
+        {
+            "pitanje": "Kada nastaje historisko doba?",
+            "a": "Dolaskom poreza",
+            "b": "Pronalaskom kalendara",
+            "c": "Razvićem robovlasničkog društva",
+            "d": "Pronalaskom pisma",
+            "tacan": "d"
+        },
+        {
+            "pitanje": "Kada je historisko doba otprilike započelo?",
+            "a": "Oko 3500 godina pr.n,e",
+            "b": "Oko 4000 godina pr.n,e",
+            "c": "Oko 2500 godina pr.n,e",
+            "d": "Oko 5000 godina pr.n,e",
+            "tacan": "a"
+        },
+        {
+            "pitanje": "Kako se historisko doba dijeli?",
+            "a": "Stari, srednji i novi vijek",
+            "b": "Davni, srednji i mladi vijek",
+            "c": "Stari i srednji vijek i savremeno doba",
+            "d": "Ni jedno od navedenog",
+            "tacan": "d"
+        },
+        {
+            "pitanje": "Kada stari vijek završava?",
+            "a": "Pronalaskom Amerike",
+            "b": "Padom Zapadnok rimskog carstva",
+            "c": "Osnivanjem Rima",
+            "d": "Stvaranjem makedonsko-grčke",
+            "tacan": "b"
+        },
+        {
+            "pitanje": "Kada srenji vijek završava?",
+            "a": "Otkrićem vatrenog oružja",
+            "b": "Krajem fedualizma",
+            "c": "Otkrićem Amerike",
+            "d": "Krajem križarskih ratova",
+            "tacan": "c"
+        },
+        {
+            "pitanje": "Kada završava novi vijek?",
+            "a": "Krajem 2. svjetksog rata",
+            "b": "Krajem 1. svjetskog rata",
+            "c": "Američkom revolucijom",
+            "d": "Industrijska revolucija",
+            "tacan": "b"
+        },
+        {
+            "pitanje": "Gdje su formirane prve države?",
+            "a": "Na bliskom istoku",
+            "b": "U Aziji",
+            "c": "U Sjevernoj Evropi",
+            "d": "U Južnoj Americi",
+            "tacan": "a"
+        },
+        {
+            "pitanje": "Koji narod je prvi otkrio pismo?",
+            "a": "Grci",
+            "b": "Kinezi",
+            "c": "Egipćani",
+            "d": "Rimljani",
+            "tacan": "c"
+        },
+        {
+            "pitanje": "Koji Homerovi epovi su se koristili kao glavni historijski izvori?",
+            "a": "Ilijada i Odiseja",
+            "b": "Kirpije",
+            "c": "Etiopida",
+            "d": "Margit i Nostoi",
+            "tacan": "a"
+        },
+        {
+            "pitanje": "Najstariji narodi Grčke bili su:",
+            "a": "Dorani",
+            "b": "Eolci",
+            "c": "Ahajci",
+            "d": "Pelazgu",
+            "tacan": "d"
+        }
+    ]
+}

@@ -1,0 +1,164 @@
+{
+    "pitanja": [
+        {
+            "pitanje": "Osnovne strukturne i funkcionalne jedinice organizacije živih bića su:",
+            "a": "Organele",
+            "b": "Ćelije",
+            "c": "Organi",
+            "d": "Tkiva",
+            "tacan": "b"
+        },
+        {
+            "pitanje": "Živa materija ili protoplazma ima svoju posebnu i karakterističnu konzistenciju zahvaljujući prisustvu:",
+            "a": "Neorganskih soli",
+            "b": "Masnih kiselina",
+            "c": "Bjelančevina i visokog sadržaja vode",
+            "d": "Ugljenih hidrata i male količine vode",
+            "tacan": "c"
+        },
+        {
+            "pitanje": "U toku metaboličkih procesa živi organizmi u odnosu na spoljašnju sredinu:",
+            "a": "Isključivo uzimaju materije i energiju",
+            "b": "Samo odaju određene materije i suvišnu energiju",
+            "c": "Razmjenjuju materije i energiju u oba smjera",
+            "d": "Razmjenjuju materije, ali ne i energiju",
+            "tacan": "c"
+        },
+        {
+            "pitanje": "Koja od navedenih odlika karakteriše živa bića:",
+            "a": "Pokretljivost",
+            "b": "Osjetljivost ili senzibilnost",
+            "c": "Sposobnost razmnožavanja",
+            "d": "Sve navedene odlike",
+            "tacan": "d"
+        },
+        {
+            "pitanje": "Koja od ovih je tačna činjenica:",
+            "a": "Tkiva predstavljaju komplekse morfološki i funkcionalno identičnih ćelija zajedničkog porijekla i određene funkcije.",
+            "b": "U sastav tkiva nikada ne ulazi međućelijska neživa materija.",
+            "c": "Nauka koja se bavi izučavanjem tkiva je fiziologija.",
+            "d": "Biljna tkiva su raznovrsnije i složenije građe od tkiva višećelijskih životinja.",
+            "tacan": "a"
+        },
+        {
+            "pitanje": "Najmanje diferencirano tkivo je:",
+            "a": "Epitelno",
+            "b": "Mišićno",
+            "c": "Nervno",
+            "d": "Vezivno",
+            "tacan": "a"
+        },
+        {
+            "pitanje": "Beskičmenjaci mogu da imaju:",
+            "a": "Jednoslojan ili višeslojan epitel pokožice",
+            "b": "Crvena krvna zrnca",
+            "c": "Koštano tkivo",
+            "d": "Glatko mišićno tkivo",
+            "tacan": "d"
+        },
+        {
+            "pitanje": "Epitel koji pokriva površinu unutrašnjih tjelesnih šupljina i krvnih sudova označen je kao:",
+            "a": "Endotel",
+            "b": "Žljezdani epitel",
+            "c": "Trepljasti epitel",
+            "d": "Kutikula",
+            "tacan": "a"
+        },
+        {
+            "pitanje": "Koje od navedenih tkiva NE PRIPADA vezivnom tkivu:",
+            "a": "Krv",
+            "b": "Koštano tkivo",
+            "c": "Mišićno tkivo",
+            "d": "Hrskavičavo tkivo",
+            "tacan": "c"
+        },
+        {
+            "pitanje": "Kod riba i vodozemaca eritrociti nastaju u:",
+            "a": "Slezini",
+            "b": "Jetri",
+            "c": "Kosnoj srži",
+            "d": "Limfnim čvorovima",
+            "tacan": "a"
+        },
+        {
+            "pitanje": "Leukociti:",
+            "a": "Su znatno brojniji od eritrocita",
+            "b": "Kod beskičmenjaka sadrže hemoglobin",
+            "c": "Uvijek imaju jedro",
+            "d": "Učestvuju u zgrušavanju krvi",
+            "tacan": "c"
+        },
+        {
+            "pitanje": "Granulociti i agranulociti su vrste:",
+            "a": "Leukocita",
+            "b": "Eritrocita",
+            "c": "Trombocita",
+            "d": "Nervnih ćelija",
+            "tacan": "a"
+        },
+        {
+            "pitanje": "Koje krvne ćelije sisara imaju jedro:",
+            "a": "Eritrociti",
+            "b": "Leukociti",
+            "c": "Trombociti",
+            "d": "Sve krvne ćelije",
+            "tacan": "b"
+        },
+        {
+            "pitanje": "Kada u uzorku krvi van krvnog suda dođe do zgrušavanja, na površini se izdvaja:",
+            "a": "Limfa",
+            "b": "Serum",
+            "c": "Plazma",
+            "d": "Fibrin",
+            "tacan": "b"
+        },
+        {
+            "pitanje": "Limfa sadrži:",
+            "a": "Eritrocite",
+            "b": "Trombocite",
+            "c": "Leukocite",
+            "d": "Nijedan navedeni tip ćelija",
+            "tacan": "c"
+        },
+        {
+            "pitanje": "Osnovni tipovi vezivnih vlakana u vlaknastom vezivnom tkivu su:",
+            "a": "Kolagena i elastična",
+            "b": "Hijalina i oseinska",
+            "c": "Kolagena i miofibrile",
+            "d": "Elastična i hijalina",
+            "tacan": "a"
+        },
+        {
+            "pitanje": "Najrasprostranjenije tkivo u tijelu kičmenjaka je:",
+            "a": "Epitelno tkivo",
+            "b": "Rastresito tkivo",
+            "c": "Mišićno tkivo",
+            "d": "Nervno tkivo",
+            "tacan": "b"
+        },
+        {
+            "pitanje": "Hrskavičavo tkivo:",
+            "a": "Karakteriše većinu beskičmenjaka",
+            "b": "Se sastoji od osteoblasta i međućelijske supstance",
+            "c": "Može biti hijalino, mrežasto i vlaknasto",
+            "d": "Pripada epitelnim tkivima",
+            "tacan": "c"
+        },
+        {
+            "pitanje": "Ćelije koštanog tkiva koje razaraju koštanu masu su:",
+            "a": "Osteoblasti",
+            "b": "Osteoklasti",
+            "c": "Hondroblasti",
+            "d": "Mioblasti",
+            "tacan": "b"
+        },
+        {
+            "pitanje": "Glatke mišićne ćelije:",
+            "a": "Su zvjezdastog oblika",
+            "b": "Imaju više jedara",
+            "c": "Se kontrahuju brzo, pod uticajem naše volje",
+            "d": "Ulaze u sastav unutrašnjih organa",
+            "tacan": "d"
+        }
+    ]
+}

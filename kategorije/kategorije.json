@@ -1,0 +1,63 @@
+{
+    "kategorije": [
+        {
+            "naziv": "Biologija",
+            "potkategorije": [
+                {
+                    "naziv": "Ćelije",
+                    "path": "Biologija/biologija_celije.json"
+                },
+                {
+                    "naziv": "Genetika",
+                    "path": "Biologija/biologija_genetika.json"
+                },
+                {
+                    "naziv": "Morfologija i sistemtika zivotinja",
+                    "path": "Biologija/biologija_morfologijaisistematikazivotinja.json"
+                }
+            ]
+        },
+        {
+            "naziv": "Engleski",
+            "potkategorije": [
+                {
+                    "naziv": "Past Continuous",
+                    "path": "Engleski/engleski_pastcontinuous.json"
+                },
+                {
+                    "naziv": "Past Simple",
+                    "path": "Engleski/engleski_pastsimple.json"
+                },
+                {
+                    "naziv": "Present Continuous",
+                    "path": "Engleski/engleski_presentcontinuous.json"
+                },
+                {
+                    "naziv": "Present Simple",
+                    "path": "Engleski/engleski_presentsimple.json"
+                }
+            ]
+        },
+        {
+            "naziv": "Historija",
+            "potkategorije": [
+                {
+                    "naziv": "Historijsko doba",
+                    "path": "Historija/historijsko_doba.json"
+                },
+                {
+                    "naziv": "Prethistorija",
+                    "path": "Historija/prethistorija.json"
+                },
+                {
+                    "naziv": "Prvi svjetski rat",
+                    "path": "Historija/prvi_svjetski_rat.json"
+                },
+                {
+                    "naziv": "Srednji vijek",
+                    "path": "Historija/srednji_vijek.json"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,84 @@
+{
+    "pitanja": [
+        {
+            "pitanje": "Kako tvorimo Past Simple za regularne glagole?",
+            "a": "Dodavanjem -ing na glagol",
+            "b": "Dodavanjem -ed ili -d na glagol",
+            "c": "Invertiranjem pomoćnog glagola i subjekta",
+            "d": "Dodavanjem -s ili -es na glagol",
+            "tacan": "b"
+        },
+        {
+            "pitanje": "Koji od sljedećih glagola je nepravilan u Past Simple?",
+            "a": "danced",
+            "b": "went",
+            "c": "played",
+            "d": "goed",
+            "tacan": "d"
+        },
+        {
+            "pitanje": "Kako se tvori upitna rečenica u Past Simple za regularne glagole?",
+            "a": "Dodavanjem -ing na glagol",
+            "b": "Dodavanjem did ispred subjekta i baze glagola",
+            "c": "Dodavanjem -ed na glagol",
+            "d": "Invertiranjem pomoćnog glagola i subjekta",
+            "tacan": "b"
+        },
+        {
+            "pitanje": "Kada koristimo Past Simple?",
+            "a": "Za opisivanje prošlih događaja ili situacija koje su završile",
+            "b": "Za opisivanje sadašnjih redovnih radnji",
+            "c": "Za opisivanje trenutnih događaja",
+            "d": "Za opisivanje radnji koje su se desile u prošlosti i idalje su aktuelne",
+            "tacan": "a"
+        },
+        {
+            "pitanje": "Kako se tvori negativna rečenica u Past Simple?",
+            "a": "Dodavanjem -ing na glagol",
+            "b": "Invertiranjem pomoćnog glagola i subjekta",
+            "c": "Dodavanjem not ispred glagola",
+            "d": "Dodavanjem -ed na glagol",
+            "tacan": "c"
+        },
+        {
+            "pitanje": "Koji oblik ima glagol to be u afirmativnoj rečenici u prošlom vremenu za treće lice jednine?",
+            "a": "was",
+            "b": "were",
+            "c": "am",
+            "d": "is",
+            "tacan": "a"
+        },
+        {
+            "pitanje": "Koja od sljedećih rečenica koristi Past Simple ispravno?",
+            "a": "He go to the store yesterday.",
+            "b": "She goed to the gym every day.",
+            "c": "They went to the beach last weekend.",
+            "d": "We is watching a movie now.",
+            "tacan": "c"
+        },
+        {
+            "pitanje": "Koja od sljedećih rečenica je tačna u negaciji za glagol to play u prošlom vremenu?",
+            "a": "I didn't played basketball.",
+            "b": "She not played the piano.",
+            "c": "We didn't play cards.",
+            "d": "He not is playing video games.",
+            "tacan": "c"
+        },
+        {
+            "pitanje": "Koja od sljedećih rečenica koristi pravilan red riječi za pitanje u Past Simple?",
+            "a": "Did you went to the party?",
+            "b": "Did she didn't like the movie?",
+            "c": "Was he plays football last Sunday?",
+            "d": "Were they at home yesterday?",
+            "tacan": "d"
+        },
+        {
+            "pitanje": "Koji od sljedećih glagola nije regularan u Past Simple?",
+            "a": "run",
+            "b": "talk",
+            "c": "walk",
+            "d": "play",
+            "tacan": "a"
+        }
+    ]
+}

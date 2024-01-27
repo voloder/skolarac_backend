@@ -110,22 +110,43 @@
                 $("#nemaigraca").removeClass("nodisplay");
             }
 
-            $("#igraci").empty();
-            soba.igraci.forEach(e => $("#igraci").append(`<p class="m-0"><img class="p-1" src="static/avatari/${e.avatar}.png" style="height:2rem">${e.ime}</p>`))
+            if (soba.stanje == "cekanje") {
+                $("#mySidebar").removeClass("nodisplay");
+                $("#main").removeClass("nodisplay");
+                $("#igraci").empty();
+                soba.igraci.forEach(e => $("#igraci").append(`<p class="m-0"><img class="p-1" src="static/avatari/${e.avatar}.png" style="height:2rem">${e.ime}</p>`))
+            }
 
             if (soba.stanje == "countdown") {
                 $("#ulaz").addClass("nodisplay");
+                $("#mySidebar").addClass("nodisplay");
+                $("#main").addClass("nodisplay");
                 $("#countdownDiv").removeClass("nodisplay");
-
                 $("#countdown").html(soba.countdown);
             }
 
             if (soba.stanje == "pitanje") {
                 $("#ulaz").addClass("nodisplay");
                 $("#countdownDiv").addClass("nodisplay");
-                $("#pitanje").removeClass("nodisplay");
-
+                $("#pitanjeDiv").removeClass("nodisplay");
                 $("#pitanje").html(soba.pitanje.pitanje);
+                $("#leaderboardDiv").removeClass("nodisplay");
+                $("#leaderboard").html(soba.igraci.map(e => `<p class="m-0"><img class="p-1" src="static/avatari/${e.avatar}.png" style="height:2rem">${e.ime} - ${e.poeni}</p>`).join(""));
+                $("#odgovoriDiv").removeClass("nodisplay");
+                $("#a").html(`${soba.pitanje.a}`);
+                $("#b").html(`${soba.pitanje.b}`);
+                $("#c").html(`${soba.pitanje.c}`);
+                $("#d").html(`${soba.pitanje.d}`);
+                $(`#a`).removeClass("text-success");
+                $(`#b`).removeClass("text-success");
+                $(`#c`).removeClass("text-success");
+                $(`#d`).removeClass("text-success");
+            }
+
+            if(soba.stanje == "otkrij") {
+                $(`#${soba.pitanje.tacan}`).addClass("text-success");
+                
+                $("#leaderboard").html(soba.igraci.map(e => `<p class="m-0"><img class="p-1" src="static/avatari/${e.avatar}.png" style="height:2rem">${e.ime} - ${e.poeni}</p>`).join(""));
             }
 
         }
@@ -136,18 +157,18 @@
 
         $(window).on('load', function () {
 
-            $("#vrijemePitanja").on("input change", function () { 
+            $("#vrijemePitanja").on("input change", function () {
                 $("#vrijemePitanjaLabel").html("Vrijeme pitanja: " + $("#vrijemePitanja").val() + "s");
             });
 
             $("#zapocniButton").on("click", function () {
                 zapocniSobu();
             });
-            
+
             $(".openbtn").on("click", function () {
                 openNav();
             });
-            
+
             $(".closebtn").on("click", function () {
                 closeNav();
             });
@@ -171,7 +192,8 @@
 
     <div id="mySidebar" class="sidebar ">
         <a href="javascript:void(0)" class="closebtn">&times;</a>
-        <label for="vrijemePitanja" class="form-label text-white p-2" id="vrijemePitanjaLabel">Vrijeme pitanja: 15s</label>
+        <label for="vrijemePitanja" class="form-label text-white p-2" id="vrijemePitanjaLabel">Vrijeme pitanja:
+            15s</label>
         <input type="range" class="form-range p-2" min="5" max="60" step="5" value="15" id="vrijemePitanja">
     </div>
 
@@ -190,7 +212,8 @@
             </div>
             <div class="m-4">
                 Učesnici:
-                <div class="border border-light rounded   p-2" id="igraci">
+                <div class="border border-light rounded p-2">
+                    <div id="igraci"></div>
                     <div class="text-muted" id="nemaigraca">Nema učesnika</div>
                 </div>
             </div>
@@ -204,8 +227,30 @@
             <h1 id="countdown"></h1>
         </div>
 
-        <div id="pitanjeDiv" class="nodisplay">
-            <h1 id="pitanje"></h1>
+        <div class="col nodisplay" id="pitanjeDiv">
+            <div class=" w-75">
+                <p id="pitanje"></p>
+            </div>
+    
+            <div class="">
+                    <div class="col-6" id="a">
+
+                    </div>
+                    <div class="col-6" id="b">
+
+                    </div>
+                    <div class="col-6" id="c">
+
+                    </div>
+                    <div class="col-6" id="d">
+
+                    </div>
+            </div>
+        </div>
+        
+
+        <div id="leaderboardDiv" class="nodisplay w-25">
+            <p id="leaderboard"></p>
         </div>
     </div>
 

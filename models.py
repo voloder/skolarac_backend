@@ -24,5 +24,10 @@ class Soba(BaseModel):
     vrijeme_pitanja: int = 10
     vrijeme_otkrivanja: int = 3
     
+    broj_pitanja: int = 10
+    trenutno_pitanje: int = 0
+    kategorije: List[str] = []
+    
+    
     def nadji_igraca(self, ime, avatar) -> Igrac:
-        return [korisnik for korisnik in self.igraci if (korisnik.ime, korisnik.avatar) == (ime, avatar)][0]
+        return [igrac for igrac in self.igraci if (igrac.ime, igrac.avatar) == (ime, avatar)][0]

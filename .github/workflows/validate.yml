@@ -1,4 +1,4 @@
-name: JSON validation
+name: JSON validacija
 
 on: [push, pull_request]
 

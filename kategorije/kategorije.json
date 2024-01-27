@@ -67,6 +67,10 @@
                     "path": "Geografija/geoloska_proslost_zemlje.json"
                 },
                 {
+                    "naziv": "Položaj Zemlje",
+                    "path": "Geografija/polozaj_zemlje.json"
+                },
+                {
                     "naziv": "Geografske karte",
                     "path": "Geografija/geografske_karte.json"
                 }

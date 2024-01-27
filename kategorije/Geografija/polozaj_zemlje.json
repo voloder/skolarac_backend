@@ -1,0 +1,100 @@
+{
+    "pitanja": [
+        {
+            "pitanje": "Koje godišnje doba započinje kada Sunce dosegne najvišu tačku na nebu iznad ekvatora?",
+            "a": "Proljeće",
+            "b": "Ljeto",
+            "c": "Jesen",
+            "d": "Zima",
+            "tacan": "b"
+        },
+      {
+            "pitanje": "Koja se linija na karti nalazi na 23.5 stepena sjeverno od ekvatora i označava najsjeverniju tačku koju Sunce može dosegnuti iznad Zemlje?",
+            "a": "Tropski krug",
+            "b": "Polarne kružnice",
+            "c": "Arktički krug",
+            "d": "Maksimalna linija sjeverne insolacije",
+            "tacan": "a"
+        },
+      {
+            "pitanje": "Koje od sljedećih godišnjih doba započinje kada Sunce dosegne najnižu tačku iznad ekvatora?",
+            "a": "Proljeće",
+            "b": "Ljeto",
+            "c": "Zima",
+            "d": "Jesen",
+            "tacan": "c"
+        },
+      {
+            "pitanje": "Koja linija na Zemlji označava 0 stepeni geografske dužine?",
+            "a": "Ekvator",
+            "b": "Meridijan",
+            "c": "Tropski krug",
+            "d": "Polarne kružnice",
+            "tacan": "b"
+        },
+      {
+            "pitanje": "Kako se zove linija koja povezuje tačke na Zemlji s jednakim vremenom izlaska sunca?",
+            "a": "Meridijan",
+            "b": "Ekvator",
+            "c": "Izolinija",
+            "d": "Tropski krug",
+            "tacan": "a"
+        },
+      {
+            "pitanje": "Koje se godišnje doba na južnoj hemisferi podudara s proljetnim ekvinocijem na sjevernoj hemisferi?",
+            "a": "Ljeto",
+            "b": "Jesen",
+            "c": "Zima",
+            "d": "Proljeće",
+            "tacan": "c"
+        },
+      {
+            "pitanje": "Kako se zove linija na kojoj Sunce sredinom dana stoji iznad glave i nema sjene?",
+            "a": "Meridijan",
+            "b": "Ekvator",
+            "c": "Polarne kružnice",
+            "d": "Zenit",
+            "tacan": "d"
+        },
+      {
+            "pitanje": "Koja linija, označena s 66.5 stepeni sjeverno i južno od ekvatora, označava područje gdje Sunce može sijati 24 sata ili biti potpuno odsutno?",
+            "a": "Ekvator",
+            "b": "Tropski krug",
+            "c": "Polarne kružnice",
+            "d": "Meridijan",
+            "tacan": "c"
+        },
+      {
+            "pitanje": "Koje se godišnje doba počinje u trenutku kada Sunce prelazi s južne na sjevernu stranu ekvatora?",
+            "a": "Proljeće",
+            "b": "Ljeto",
+            "c": "Jesen",
+            "d": "Zima",
+            "tacan": "a"
+        },
+      {
+            "pitanje": "Koja je linija označena s 90 stepena sjeverno i južno od ekvatora?",
+            "a": "Tropski krug",
+            "b": "Polarne kružnice",
+            "c": "Meridijan",
+            "d": "Ekvator",
+            "tacan": "b"
+        },
+      {
+            "pitanje": "Kako se zove linija koja povezuje tačke s jednakim vremenom zalaska sunca?",
+            "a": "Izolinija",
+            "b": "Tropski krug",
+            "c": "Meridijan",
+            "d": "Paralela",
+            "tacan": "a"
+        },
+      {
+            "pitanje": "Koje se godišnje doba počinje kada Sunce prelazi s sjeverne na južnu stranu ekvatora?",
+            "a": "Proljeće",
+            "b": "Ljeto",
+            "c": "Jesen",
+            "d": "Zima",
+            "tacan": "c"
+        }
+    ]
+}

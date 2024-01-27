@@ -64,7 +64,7 @@
             "potkategorije": [
                 {
                     "naziv": "Geološka prošlost zemlje",
-                    "path": "Geografija/gološka_prošlost_zemlje.json"
+                    "path": "Geografija/geoloska_proslost_zemlje.json"
                 }
             ]
         },

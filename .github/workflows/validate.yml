@@ -1,10 +1,6 @@
 name: JSON validation
 
-on:
-  push:
-    paths:
-      - '**.json'
-  pull_request:
+on: [push, pull_request]
 
 jobs:
   test:

@@ -17,7 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
-        <link rel="stylesheet"
+    <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
     <style>
         html,
@@ -25,6 +25,7 @@
             width: 100%;
             height: 100%;
             font-family: 'Nunito Sans', sans-serif;
+            background-color: aliceblue;
         }
 
         h1 {
@@ -33,10 +34,6 @@
 
         #kod h1 {
             font-size: 7rem;
-        }
-
-        .btn-green {
-            background-color: limegreen;
         }
 
         .nodisplay {
@@ -83,6 +80,19 @@
             text-decoration: none;
             padding-left: 15px;
             position: relative;
+        }
+
+        .odgovor {
+            height: 15vh;
+            margin: 20px;
+            padding: 2vh;
+            border-radius: 20px;
+        }
+
+        .status {
+            position: absolute;
+            right: 0;
+            padding: 20px;
         }
     </style>
 
@@ -155,11 +165,15 @@
                 $(`#b`).removeClass("text-success");
                 $(`#c`).removeClass("text-success");
                 $(`#d`).removeClass("text-success");
+                $("#vrijeme").removeClass("nodisplay");
+                $("#brojPitanja").removeClass("nodisplay");
+                $("#vrijeme").html(soba.countdown);
+                $("#brojPitanja").html(`PITANJE ${soba.trenutno_pitanje}/${soba.postavke.broj_pitanja}`);
             }
 
-            if(soba.stanje == "otkrij") {
+            if (soba.stanje == "otkrij") {
                 $(`#${soba.pitanje.tacan}`).addClass("text-success");
-
+                $("#vrijeme").html(soba.countdown);
                 $("#leaderboard").html(soba.igraci.map(e => `<p class="m-0"><img class="p-1" src="static/avatari/${e.avatar}.png" style="height:2rem">${e.ime} - ${e.poeni}</p>`).join(""));
             }
 
@@ -202,23 +216,23 @@
     </script>
 </head>
 
-<body class="bg-info">
+<body>
 
-    <div id="mySidebar" class="sidebar ">
+    <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn">&times;</a>
         <label for="vrijemePitanja" class="form-label text-white p-2" id="vrijemePitanjaLabel">Vrijeme pitanja:
             15s</label>
         <input type="range" class="form-range p-2" min="5" max="60" step="5" value="15" id="vrijemePitanja">
     </div>
 
-    <div id="main">
+    <div id="main" class="">
         <button class="openbtn"><span class="material-symbols-outlined" style="font-size:60px;">
                 settings
             </span></button>
     </div>
 
-    <div class="h-100 d-flex justify-content-center align-items-center text-white">
-        <div id="ulaz">
+    <div class="h-100 d-flex justify-content-center align-items-center text-dark">
+        <div id="ulaz" class="text-dark">
             <h1>KÔD ZA SOBU:</h1>
 
             <div class="d-flex justify-content-center" id="kod">
@@ -226,7 +240,7 @@
             </div>
             <div class="m-4">
                 Učesnici:
-                <div class="border border-light rounded p-2">
+                <div class="border border-dark rounded p-2">
                     <div id="igraci"></div>
                     <div class="text-muted" id="nemaigraca">Nema učesnika</div>
                 </div>
@@ -237,34 +251,62 @@
             </div>
 
         </div>
-        <div id="countdownDiv" class="nodisplay">
+        <div id="countdownDiv" class="nodisplay text-dark">
             <h1 id="countdown"></h1>
         </div>
 
-        <div class="col nodisplay" id="pitanjeDiv">
-            <div class=" w-75">
-                <p id="pitanje"></p>
+        <div class="position-absolute top-0 start-0">
+            <h4 id="vrijeme" class="nodisplay">4s</h4>
+        </div>
+        <div class="position-absolute top-0 start-50">
+            <h4 id="brojPitanja" class="nodisplay">4/10</h4>
+        </div>
+
+        <div class="col nodisplay text-white" id="pitanjeDiv">
+            <h3 id="pitanje" class="text-dark text-center"></h3>
+
+            <div class="odgovor row align-items-center" style="background-color: #1D2D60;">
+                <div class="rounded-circle justify-content-center m-0 d-flex"
+                    style="height: 10vh !important;width : 10vh !important;background-color:#31A062">
+                    <p class="align-self-center m-0" style="font-size: 5vh;">A</p>
+                </div>
+                <div id="a" class="col h4 m-0">
+
+                </div>
             </div>
-
-            <div class="">
-                <div class="col-6" id="a">
+            <div class="odgovor row align-items-center" style="background-color: #F65E5D;">
+                <div class="rounded-circle justify-content-center m-0 d-flex"
+                    style="height: 10vh !important;width : 10vh !important;background-color:#31A062">
+                    <p class="align-self-center m-0" style="font-size: 5vh;">B</p>
+                </div>
+                <div id="b" class="col h4 m-0">
 
                 </div>
-                <div class="col-6" id="b">
+            </div>
+            <div class="odgovor row align-items-center" style="background-color: #FFBC47;">
+                <div class="rounded-circle justify-content-center m-0 d-flex"
+                    style="height: 10vh !important;width : 10vh !important;background-color:#31A062">
+                    <p class="align-self-center m-0" style="font-size: 5vh;">C</p>
+                </div>
+                <div id="c" class="col h4 m-0">
 
                 </div>
-                <div class="col-6" id="c">
-
+            </div>
+            <div class="odgovor row align-items-center" style="background-color: #40CEE2;">
+                <div class="rounded-circle justify-content-center m-0 d-flex"
+                    style="height: 10vh !important;width : 10vh !important;background-color:#31A062">
+                    <p class="align-self-center m-0" style="font-size: 5vh;">D</p>
                 </div>
-                <div class="col-6" id="d">
+                <div id="d" class="col h4 m-0">
 
                 </div>
             </div>
         </div>
 
 
-        <div id="leaderboardDiv" class="nodisplay w-25">
-            <p id="leaderboard"></p>
+        <div id="leaderboardDiv" class="w-25 nodisplay rounded h-100 shadow" style="background-color: #00000001;">
+            <p style="font-size: 4vw" class="text-center">RANKING</p>
+            <span id="leaderboard"></span>
         </div>
     </div>
 

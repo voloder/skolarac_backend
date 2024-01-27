@@ -17,7 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet"
+        <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
     <style>
         html,
@@ -93,13 +93,27 @@
 
         var soba;
 
-        $.get("/sobe/kreiraj/", function (kod) {
-            $("#kod").html(`<h1>${kod}</h1>`);
+        $.ajax({
+            type: "POST",
+            url: "/sobe/kreiraj/",
+            data: JSON.stringify({
+                broj_pitanja: 10,
+                vrijeme_pitanja: 20,
+                vrijeme_otkrivanja: 3,
+                kategorije: [
+                    "Prethistorija"
+                ],
+                custom_pitanja: []
+            }),
+            success: function (kod) {
+                $("#kod").html(`<h1>${kod}</h1>`);
 
-            socket.on("soba_" + kod, function (data) {
-                soba = JSON.parse(data)
-                onChanged(soba)
-            });
+                socket.on("soba_" + kod, function (data) {
+                    soba = JSON.parse(data)
+                    onChanged(soba)
+                });
+            },
+            contentType: "application/json; charset=utf-8",
         });
 
         function onChanged(soba) {
@@ -145,7 +159,7 @@
 
             if(soba.stanje == "otkrij") {
                 $(`#${soba.pitanje.tacan}`).addClass("text-success");
-                
+
                 $("#leaderboard").html(soba.igraci.map(e => `<p class="m-0"><img class="p-1" src="static/avatari/${e.avatar}.png" style="height:2rem">${e.ime} - ${e.poeni}</p>`).join(""));
             }
 
@@ -231,23 +245,23 @@
             <div class=" w-75">
                 <p id="pitanje"></p>
             </div>
-    
+
             <div class="">
-                    <div class="col-6" id="a">
+                <div class="col-6" id="a">
 
-                    </div>
-                    <div class="col-6" id="b">
+                </div>
+                <div class="col-6" id="b">
 
-                    </div>
-                    <div class="col-6" id="c">
+                </div>
+                <div class="col-6" id="c">
 
-                    </div>
-                    <div class="col-6" id="d">
+                </div>
+                <div class="col-6" id="d">
 
-                    </div>
+                </div>
             </div>
         </div>
-        
+
 
         <div id="leaderboardDiv" class="nodisplay w-25">
             <p id="leaderboard"></p>

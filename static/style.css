@@ -1,0 +1,129 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Road Rage', sans-serif;
+    background-color: aliceblue;
+}
+
+div {
+    font-size: 2rem;
+}
+
+.btn-primary {
+    font-size: 2rem;
+    background-color: #31A062 !important;
+    border-color: #31A062 !important;
+}
+
+.form-range::-moz-range-thumb {
+    background-color: #31A062;
+}
+
+.form-range::-webkit-slider-thumb {
+    background-color: #31A062;
+}
+
+.input-group-text {
+    font-size: 1.2rem !important;
+}
+
+.form-control {
+    font-size: 1.2rem !important;
+}
+
+h1 {
+    font-size: 6rem;
+    line-height: 7rem;
+}
+
+#kod h1 {
+    font-size: 11rem;
+}
+
+.nodisplay {
+    display: none;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    width: 300px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgb(50, 50, 68);
+    overflow-x: hidden;
+    transition: 0.3s;
+    transform: translate(100%, 0);
+}
+
+.sidebar * {
+    display: block;
+}
+
+.sidebar .closebtn {
+    position: relative;
+    top: 0;
+    font-size: 36px;
+}
+
+.openbtn {
+    cursor: pointer;
+    background-color: #00000000;
+    color: black;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#main {
+    position: absolute;
+    padding: 20px;
+    right: 0;
+    top: 0;
+}
+
+.closebtn {
+    color: white;
+    text-decoration: none;
+    padding-left: 15px;
+    position: relative;
+}
+
+.odgovor {
+    height: 15vh;
+    margin: 20px;
+    padding: 2vh;
+    border-radius: 20px;
+}
+
+.status {
+    position: absolute;
+    right: 0;
+    padding: 20px;
+}
+
+.form-check {
+    font-size: 1.5rem;
+}
+
+.h2 {
+    font-size: 4rem;
+}
+
+#ucesnici {
+    overflow-y: auto !important;
+    max-height: 300px;
+}
+
+#zavrsni-leaderboard {
+    overflow-y: auto !important;
+    max-height: 500px;
+}
+
+.bi-trash {
+    cursor: pointer;
+}

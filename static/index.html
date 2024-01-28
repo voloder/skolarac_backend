@@ -6,8 +6,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,1000&display=swap"
-        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Road+Rage">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -17,241 +18,64 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
-    <style>
-        html,
-        body {
-            width: 100%;
-            height: 100%;
-            font-family: 'Nunito Sans', sans-serif;
-            background-color: aliceblue;
-        }
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.min.js"></script>
+    
+    <link rel="stylesheet" href="/static/style.css">
 
-        h1 {
-            font-size: 4rem;
-        }
-
-        #kod h1 {
-            font-size: 7rem;
-        }
-
-        .nodisplay {
-            display: none;
-        }
-
-        .sidebar {
-            height: 100%;
-            width: 0;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            right: 0;
-            background-color: rgb(50, 50, 68);
-            overflow-x: hidden;
-            transition: 0.3s;
-        }
-
-        .sidebar * {
-            display: block;
-        }
-
-        .sidebar .closebtn {
-            position: relative;
-            top: 0;
-            font-size: 36px;
-        }
-
-        .openbtn {
-            cursor: pointer;
-            background-color: #00000000;
-            color: black;
-            border: none;
-        }
-
-        #main {
-            position: absolute;
-            right: 0;
-            padding: 20px;
-        }
-
-        .closebtn {
-            color: white;
-            text-decoration: none;
-            padding-left: 15px;
-            position: relative;
-        }
-
-        .odgovor {
-            height: 15vh;
-            margin: 20px;
-            padding: 2vh;
-            border-radius: 20px;
-        }
-
-        .status {
-            position: absolute;
-            right: 0;
-            padding: 20px;
-        }
-    </style>
-
-    <script type="module">
-        import { io } from "https://cdn.socket.io/4.7.4/socket.io.esm.min.js";
-
-        const socket = io();
-
-        var soba;
-
-        $.ajax({
-            type: "POST",
-            url: "/sobe/kreiraj/",
-            data: JSON.stringify({
-                broj_pitanja: 10,
-                vrijeme_pitanja: 20,
-                vrijeme_otkrivanja: 3,
-                kategorije: [
-                    "Prethistorija"
-                ],
-                custom_pitanja: []
-            }),
-            success: function (kod) {
-                $("#kod").html(`<h1>${kod}</h1>`);
-
-                socket.on("soba_" + kod, function (data) {
-                    soba = JSON.parse(data)
-                    onChanged(soba)
-                });
-            },
-            contentType: "application/json; charset=utf-8",
-        });
-
-        function onChanged(soba) {
-            console.log(soba);
-            if (soba.igraci.length != 0) {
-                $("#nemaigraca").addClass("nodisplay");
-            } else {
-                $("#nemaigraca").removeClass("nodisplay");
-            }
-
-            if (soba.stanje == "cekanje") {
-                $("#mySidebar").removeClass("nodisplay");
-                $("#main").removeClass("nodisplay");
-                $("#igraci").empty();
-                soba.igraci.forEach(e => $("#igraci").append(`<p class="m-0"><img class="p-1" src="static/avatari/${e.avatar}.png" style="height:2rem">${e.ime}</p>`))
-            }
-
-            if (soba.stanje == "countdown") {
-                $("#ulaz").addClass("nodisplay");
-                $("#mySidebar").addClass("nodisplay");
-                $("#main").addClass("nodisplay");
-                $("#countdownDiv").removeClass("nodisplay");
-                $("#countdown").html(soba.countdown);
-            }
-
-            if (soba.stanje == "pitanje") {
-                $("#ulaz").addClass("nodisplay");
-                $("#countdownDiv").addClass("nodisplay");
-                $("#pitanjeDiv").removeClass("nodisplay");
-                $("#pitanje").html(soba.pitanje.pitanje);
-                $("#leaderboardDiv").removeClass("nodisplay");
-                $("#leaderboard").html(soba.igraci.map(e => `<p class="m-0"><img class="p-1" src="static/avatari/${e.avatar}.png" style="height:2rem">${e.ime} - ${e.poeni}</p>`).join(""));
-                $("#odgovoriDiv").removeClass("nodisplay");
-                $("#a").html(`${soba.pitanje.a}`);
-                $("#b").html(`${soba.pitanje.b}`);
-                $("#c").html(`${soba.pitanje.c}`);
-                $("#d").html(`${soba.pitanje.d}`);
-                $(`#a`).removeClass("text-success");
-                $(`#b`).removeClass("text-success");
-                $(`#c`).removeClass("text-success");
-                $(`#d`).removeClass("text-success");
-                $("#vrijeme").removeClass("nodisplay");
-                $("#brojPitanja").removeClass("nodisplay");
-                $("#vrijeme").html(soba.countdown);
-                $("#brojPitanja").html(`PITANJE ${soba.trenutno_pitanje}/${soba.postavke.broj_pitanja}`);
-            }
-
-            if (soba.stanje == "otkrij") {
-                $(`#${soba.pitanje.tacan}`).addClass("text-success");
-                $("#vrijeme").html(soba.countdown);
-                $("#leaderboard").html(soba.igraci.map(e => `<p class="m-0"><img class="p-1" src="static/avatari/${e.avatar}.png" style="height:2rem">${e.ime} - ${e.poeni}</p>`).join(""));
-            }
-
-        }
-
-        function zapocniSobu() {
-            $.post("/sobe/zapocni/?kod=" + soba.kod);
-        }
-
-        $(window).on('load', function () {
-
-            $("#vrijemePitanja").on("input change", function () {
-                $("#vrijemePitanjaLabel").html("Vrijeme pitanja: " + $("#vrijemePitanja").val() + "s");
-            });
-
-            $("#zapocniButton").on("click", function () {
-                zapocniSobu();
-            });
-
-            $(".openbtn").on("click", function () {
-                openNav();
-            });
-
-            $(".closebtn").on("click", function () {
-                closeNav();
-            });
-
-        });
-
-        function openNav() {
-            document.getElementById("mySidebar").style.width = "300px";
-        }
-
-        function closeNav() {
-            document.getElementById("mySidebar").style.width = "0";
-        }
-
-
-
-    </script>
+    <script src="/static/index.js"></script>
 </head>
 
 <body>
 
-    <div id="mySidebar" class="sidebar">
+    <div id="postavke" class="sidebar text-light p-2 bg-dark">
         <a href="javascript:void(0)" class="closebtn">&times;</a>
-        <label for="vrijemePitanja" class="form-label text-white p-2" id="vrijemePitanjaLabel">Vrijeme pitanja:
-            15s</label>
-        <input type="range" class="form-range p-2" min="5" max="60" step="5" value="15" id="vrijemePitanja">
+        <label for="brojPitanja" class="form-label" id="broj-pitanja-label"></label>
+        <input type="range" class="form-range" min="1" max="20" step="1" value="10" id="broj-pitanja">
+
+        <label for="vrijemePitanja" class="form-label" id="vrijeme-pitanja-label"></label>
+        <input type="range" class="form-range" min="5" max="60" step="5" value="15" id="vrijeme-pitanja"
+            oninput="this.nextElementSibling.value = this.value">
+
+        <label for="vrijemeOtkrivanja" class="form-label" id="vrijeme-otkrivanja-label"></label>
+        <input type="range" class="form-range" min="1" max="10" step="1" value="3" id="vrijeme-otkrivanja"
+            oninput="this.nextElementSibling.value = this.value">
+        <div id="kategorije" class="p-2"></div>
+        <div class="btn btn-primary" id="add-custom">+ CUSTOM PITANJA</div>
+        <div id="custom-pitanja">
+
+        </div>
+
     </div>
 
     <div id="main" class="">
-        <button class="openbtn"><span class="material-symbols-outlined" style="font-size:60px;">
-                settings
-            </span></button>
+
+        <button class="openbtn"><i class="bi bi-gear me-4" style="font-size:70px;"></i></button>
+        <img src="static/img.png" style="height: 40vh;padding: 80px 40px 0 0;" id="nema-kategorije-strijela" class="nodisplay">
     </div>
 
     <div class="h-100 d-flex justify-content-center align-items-center text-dark">
-        <div id="ulaz" class="text-dark">
-            <h1>KÔD ZA SOBU:</h1>
+        <div id="ulaz" class="text-dark justify-content-center">
+            <h1 class="m-0">KOD KVIZA:</h1>
 
-            <div class="d-flex justify-content-center" id="kod">
+            <div class="d-flex justify-content-center m-0" id="kod">
                 <div class="spinner-border align-items-center" role="status" style="width: 7rem; height: 7rem;"></div>
             </div>
             <div class="m-4">
                 Učesnici:
-                <div class="border border-dark rounded p-2">
+                <div class="border border-dark rounded p-2" id="ucesnici">
                     <div id="igraci"></div>
                     <div class="text-muted" id="nemaigraca">Nema učesnika</div>
                 </div>
             </div>
+            <div class="text-danger text-center nodisplay" id="nema-kategorije-tekst">Prvo odaberite kategorije!</div>
             <div class="d-flex justify-content-center">
-                <button class="btn btn-primary text-white p-3 display-5 rounded-pill"
-                    id="zapocniButton">ZAPOČNI</button>
+                <button class="btn btn-primary text-white pt-1 pb-1 ps-4 pe-4 display-5 rounded-pill"
+                    id="zapocni-button">ZAPOČNI</button>
             </div>
 
         </div>
-        <div id="countdownDiv" class="nodisplay text-dark">
+        <div id="countdown-div" class="nodisplay text-dark">
             <h1 id="countdown"></h1>
         </div>
 
@@ -259,54 +83,62 @@
             <h4 id="vrijeme" class="nodisplay">4s</h4>
         </div>
         <div class="position-absolute top-0 start-50">
-            <h4 id="brojPitanja" class="nodisplay">4/10</h4>
+            <h4 id="broj-pitanja" class="nodisplay">4/10</h4>
         </div>
 
-        <div class="col nodisplay text-white" id="pitanjeDiv">
+        <div class="col nodisplay text-white" id="pitanje-div">
             <h3 id="pitanje" class="text-dark text-center"></h3>
 
             <div class="odgovor row align-items-center" style="background-color: #1D2D60;">
                 <div class="rounded-circle justify-content-center m-0 d-flex"
                     style="height: 10vh !important;width : 10vh !important;background-color:#31A062">
-                    <p class="align-self-center m-0" style="font-size: 5vh;">A</p>
+                    <p class="align-self-center m-0" style="font-size: 9vh;">A</p>
                 </div>
-                <div id="a" class="col h4 m-0">
+                <div id="a" class="col h3 m-0">
 
                 </div>
             </div>
             <div class="odgovor row align-items-center" style="background-color: #F65E5D;">
                 <div class="rounded-circle justify-content-center m-0 d-flex"
                     style="height: 10vh !important;width : 10vh !important;background-color:#31A062">
-                    <p class="align-self-center m-0" style="font-size: 5vh;">B</p>
+                    <p class="align-self-center m-0" style="font-size: 9vh;">B</p>
                 </div>
-                <div id="b" class="col h4 m-0">
+                <div id="b" class="col h3 m-0">
 
                 </div>
             </div>
             <div class="odgovor row align-items-center" style="background-color: #FFBC47;">
                 <div class="rounded-circle justify-content-center m-0 d-flex"
                     style="height: 10vh !important;width : 10vh !important;background-color:#31A062">
-                    <p class="align-self-center m-0" style="font-size: 5vh;">C</p>
+                    <p class="align-self-center m-0" style="font-size: 9vh;">C</p>
                 </div>
-                <div id="c" class="col h4 m-0">
+                <div id="c" class="col h3 m-0">
 
                 </div>
             </div>
             <div class="odgovor row align-items-center" style="background-color: #40CEE2;">
                 <div class="rounded-circle justify-content-center m-0 d-flex"
                     style="height: 10vh !important;width : 10vh !important;background-color:#31A062">
-                    <p class="align-self-center m-0" style="font-size: 5vh;">D</p>
+                    <p class="align-self-center m-0" style="font-size: 9vh;">D</p>
                 </div>
-                <div id="d" class="col h4 m-0">
+                <div id="d" class="col h3 m-0">
 
                 </div>
             </div>
         </div>
 
 
-        <div id="leaderboardDiv" class="w-25 nodisplay rounded h-100 shadow" style="background-color: #00000001;">
+        <div id="leaderboard-div" class="w-25 nodisplay rounded h-100 shadow" style="background-color: #00000001;">
             <p style="font-size: 4vw" class="text-center">RANKING</p>
             <span id="leaderboard"></span>
+        </div>
+
+        <div id="zavrseno-div" class="nodisplay">
+            <h1 class="text-center">KRAJ KVIZA</h1>
+            <div id="zavrsni-leaderboard" class="border border-dark rounded p-2"></div>
+            <div class="text-center m-4">
+                <button class="btn btn-primary text-white pt-1 pb-1 ps-4 pe-4 display-5 rounded-pill" onclick="location.reload()">NOVA IGRA</button>
+            </div>
         </div>
     </div>
 

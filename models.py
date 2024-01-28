@@ -31,7 +31,7 @@ class Soba(BaseModel):
     stanje: str = "cekanje"
     trenutno_pitanje: int = 0
     
-    postavke : SobaPostavke
+    postavke : SobaPostavke | None = None
         
     def nadji_igraca(self, ime, avatar) -> Igrac:
         return [igrac for igrac in self.igraci if (igrac.ime, igrac.avatar) == (ime, avatar)][0]

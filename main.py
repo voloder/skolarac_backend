@@ -30,18 +30,18 @@ async def udji(kod : str, igrac : Igrac) -> Soba:
     raise HTTPException(status_code=404, detail="Soba ne postoji")
 
 @app.post("/sobe/kreiraj/")
-async def kreiraj(postavke : SobaPostavke) -> str:
+async def kreiraj() -> str:
 
     kod = str(random.randint(1000, 9999))
-    soba = Soba(kod=kod, igraci=[], postavke=postavke)
-    print(soba.postavke.kategorije)
+    soba = Soba(kod=kod, igraci=[])
     sobe.append(soba)
     asyncio.create_task(cisti(soba))
     return kod
 
 @app.post("/sobe/zapocni/")
-async def zapocni(kod : str):
+async def zapocni(kod : str, postavke : SobaPostavke):
     soba = nadji_sobu(kod)
+    soba.postavke = postavke
     asyncio.create_task(zapocni_sobu(soba))
     return 200
 
@@ -99,10 +99,10 @@ async def odabir(event : str, sid : str, data : str):
 
 async def update_sobu(soba : Soba):
     s = soba.model_dump()
-    
-    s["postavke"].pop("custom_pitanja")
-    s["postavke"].pop("kategorije")
-    
+    if(soba.postavke is not None):
+        s["postavke"].pop("custom_pitanja")
+        s["postavke"].pop("kategorije")
+        
     await sio.emit("soba_" + soba.kod, json.dumps(s))
     
 async def odbroji(soba : Soba, vrjeme : int):

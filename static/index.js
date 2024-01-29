@@ -57,9 +57,9 @@ function socketEvent(soba) {
         $(`#c`).removeClass("text-success");
         $(`#d`).removeClass("text-success");
         $("#vrijeme").removeClass("nodisplay");
-        $("#broj-pitanja").removeClass("nodisplay");
+        $("#trenutno-pitanje").removeClass("nodisplay");
         $("#vrijeme").html(soba.countdown);
-        $("#broj-pitanja").html(`PITANJE ${soba.trenutno_pitanje}/${soba.postavke.broj_pitanja}`);
+        $("#trenutno-pitanje").html(`PITANJE ${soba.trenutno_pitanje}/${soba.postavke.broj_pitanja}`);
     }
 
     if (soba.stanje == "otkrij") {

@@ -212,7 +212,7 @@ $.get("/kategorije/", function (data) {
 function updateKategorije() {
     var kategorije = odabraneKategorije();
 
-    if (kategorije.length == 0) {
+    if (kategorije.length < 2) {
         $("#nema-kategorije-tekst").removeClass("nodisplay");
         $("#nema-kategorije-strijela").removeClass("nodisplay");
     } else {

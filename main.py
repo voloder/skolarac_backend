@@ -94,7 +94,7 @@ async def odabir(event : str, sid : str, data : str):
     print(data["odgovor"])
     if(data["odgovor"] is not None):
         if(["a", "b", "c", "d"][data["odgovor"]] == soba.pitanje.tacan):
-            igrac.poeni += 5
+            igrac.poeni += 1
 
 
 async def update_sobu(soba : Soba):

@@ -1,7 +1,6 @@
 import asyncio
 import json
-from fastapi import FastAPI, HTTPException, WebSocket
-from fastapi.staticfiles import StaticFiles
+from fastapi import FastAPI, HTTPException
 import socketio
 
 from models import *

@@ -10,15 +10,15 @@ from typing import List
 app = FastAPI()
 
 static_files = {
-    "/static": "./static",
-    "/":  "./static/index.html",
+    "skolarac/static": "./static",
+    "skolarac/":  "./static/index.html",
 }
 
 sio = socketio.AsyncServer(async_mode="asgi")
 
 sobe: List[Soba] = []
 
-@app.post("/sobe/udji/")
+@app.post("skolarac/sobe/udji/")
 async def udji(kod : str, igrac : Igrac) -> Soba:
     for soba in sobe:
         if soba.kod == kod:
@@ -28,7 +28,7 @@ async def udji(kod : str, igrac : Igrac) -> Soba:
             return soba
     raise HTTPException(status_code=404, detail="Soba ne postoji")
 
-@app.post("/sobe/kreiraj/")
+@app.post("skolarac/sobe/kreiraj/")
 async def kreiraj() -> str:
 
     kod = str(random.randint(1000, 9999))
@@ -37,14 +37,14 @@ async def kreiraj() -> str:
     asyncio.create_task(cisti(soba))
     return kod
 
-@app.post("/sobe/zapocni/")
+@app.post("skolarac/sobe/zapocni/")
 async def zapocni(kod : str, postavke : SobaPostavke):
     soba = nadji_sobu(kod)
     soba.postavke = postavke
     asyncio.create_task(zapocni_sobu(soba))
     return 200
 
-@app.post("/sobe/napusti/")
+@app.post("skolarac/sobe/napusti/")
 async def napusti(igrac : Igrac):
     for soba in sobe:
         if igrac in soba.igraci:
@@ -54,7 +54,7 @@ async def napusti(igrac : Igrac):
             return 200
     raise HTTPException(status_code=404, detail="Soba ne postoji")
     
-@app.get("/kategorije/")
+@app.get("skolarac/kategorije/")
 async def kategorije():
     response = []
     
@@ -162,4 +162,4 @@ async def cisti(soba : Soba): # ova funkcija brise sobu ako nije zapoceta 10 min
     if(soba.stanje == "cekanje"):
         sobe.remove(soba)
 
-app.mount("/", socketio.ASGIApp(sio, static_files=static_files))
+app.mount("skolarac/", socketio.ASGIApp(sio, static_files=static_files))
